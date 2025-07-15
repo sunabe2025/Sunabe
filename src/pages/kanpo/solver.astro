@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>漢方検索システム</title>
+  <script src="kampoData.js" defer></script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #74b9ff, #0984e3);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+    input {
+      width: 90%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      outline: none;
+      text-align: center;
+    }
+    button {
+      width: 95%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: #ff7675;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #d63031;
+      transform: scale(1.05);
+    }
+    .result {
+      margin-top: 20px;
+      text-align: left;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.8);
+      color: black;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background: #74b9ff;
+    }
+    #printBtn {
+      display: none;
+      width: 50%;
+      padding: 8px;
+      font-size: 14px;
+      background: #00b894;
+      border: none;
+      border-radius: 5px;
+      margin: 10px auto;
+      display: block;
+    }
+    #printBtn:hover {
+      background: #009e75;
+    }
+    .kampo-link {
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #ffda79;
+      text-decoration: none;
+    }
+    .kampo-link:hover {
+      text-decoration: underline;
+    }
+
+/* 相性が悪い漢方のタイトルを警告色（赤）に */
+.warning {
+    color: #d63031;  /* 赤色 */
+    font-weight: bold;
+}
+
+/* 警告メッセージボックス */
+.warning-box {
+    background: rgba(255, 0, 0, 0.1);
+    border: 2px solid #d63031;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #d63031;
+    font-weight: bold;
+}
+
+/* 情報メッセージボックス */
+.info-box {
+    background: rgba(255, 255, 0, 0.2);
+    border: 2px solid #f1c40f;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <h2>複数の漢方組成飲み合わせ計算機</h2>
+  
+  <div class="container">
+    <h3>漢方番号を入力</h3>
+    <input type="text" id="searchInput" placeholder="例: 1, 2">
+    <button onclick="searchKampo()">検索</button>
+    <button id="printBtn" onclick="window.print()">印刷</button>
+    
+    <div class="result hidden" id="resultArea">
+      <h3>検索結果</h3>
+      <div id="kampoDetails"></div>
+      <h4>合計成分</h4>
+      <table id="totalTable">
+        
+        <thead>
+          <tr>
+            <th>成分名</th>
+            <th>合計量 (g)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const kampoLinks = {
+      "1": "https://sunabekanpou.vivian.jp/kan1.html",
+      "2": "https://sunabekanpou.vivian.jp/kan2.html",
+      "3": "https://sunabekanpou.vivian.jp/kan3.html",
+      "5": "https://sunabekanpou.vivian.jp/kan5.html",
+      "6": "https://sunabekanpou.vivian.jp/kan6.html",
+      "7": "https://sunabekanpou.vivian.jp/kan7.html",
+      "8": "https://sunabekanpou.vivian.jp/kan8.html",
+      "10": "https://sunabekanpou.vivian.jp/kan10.html",
+      "11": "https://sunabekanpou.vivian.jp/kan11.html",
+      "12": "https://sunabekanpou.vivian.jp/kan12.html",
+      "14": "https://sunabekanpou.vivian.jp/kan14.html",
+      "15": "https://sunabekanpou.vivian.jp/kan15.html",
+      "16": "https://sunabekanpou.vivian.jp/kan16.html",
+      "17": "https://sunabekanpou.vivian.jp/kan17.html",
+      "18": "https://sunabekanpou.vivian.jp/kan18.html",
+      "19": "https://sunabekanpou.vivian.jp/kan19.html",
+      "20": "https://sunabekanpou.vivian.jp/kan20.html",
+      "21": "https://sunabekanpou.vivian.jp/kan21.html",
+      "22": "https://sunabekanpou.vivian.jp/kan22.html",
+      "23": "https://sunabekanpou.vivian.jp/kan23.html",
+      "24": "https://sunabekanpou.vivian.jp/kan24.html",
+      "25": "https://sunabekanpou.vivian.jp/kan25.html",
+      "26": "https://sunabekanpou.vivian.jp/kan26.html",
+      "27": "https://sunabekanpou.vivian.jp/kan27.html",
+      "28": "https://sunabekanpou.vivian.jp/kan28.html",
+      "29": "https://sunabekanpou.vivian.jp/kan29.html",
+      "30": "https://sunabekanpou.vivian.jp/kan30.html",
+      "31": "https://sunabekanpou.vivian.jp/kan31.html",
+      "32": "https://sunabekanpou.vivian.jp/kan32.html",
+      "33": "https://sunabekanpou.vivian.jp/kan33.html",
+      "34": "https://sunabekanpou.vivian.jp/kan34.html",
+      "35": "https://sunabekanpou.vivian.jp/kan35.html",
+      "36": "https://sunabekanpou.vivian.jp/kan36.html",
+      "37": "https://sunabekanpou.vivian.jp/kan37.html",
+      "38": "https://sunabekanpou.vivian.jp/kan38.html",
+      "39": "https://sunabekanpou.vivian.jp/kan39.html",
+      "40": "https://sunabekanpou.vivian.jp/kan40.html",
+      "41": "https://sunabekanpou.vivian.jp/kan41.html",
+      "43": "https://sunabekanpou.vivian.jp/kan43.html",
+      "45": "https://sunabekanpou.vivian.jp/kan45.html",
+      "46": "https://sunabekanpou.vivian.jp/kan46.html",
+      "47": "https://sunabekanpou.vivian.jp/kan47.html",
+      "48": "https://sunabekanpou.vivian.jp/kan48.html",
+      "50": "https://sunabekanpou.vivian.jp/kan50.html",
+      "52": "https://sunabekanpou.vivian.jp/kan52.html",
+      "53": "https://sunabekanpou.vivian.jp/kan53.html",
+      "54": "https://sunabekanpou.vivian.jp/kan54.html",
+      "55": "https://sunabekanpou.vivian.jp/kan55.html",
+      "57": "https://sunabekanpou.vivian.jp/kan56.html",
+      "59": "https://sunabekanpou.vivian.jp/kan59.html",
+      "60": "https://sunabekanpou.vivian.jp/kan60.html",
+
+
+
+      
+    };
+
+
+    function searchKampo() {
+    let input = document.getElementById("searchInput").value.trim();
+    let resultArea = document.getElementById("resultArea");
+    let kampoDetails = document.getElementById("kampoDetails");
+    let totalTable = document.getElementById("totalTable").querySelector("tbody");
+    let printBtn = document.getElementById("printBtn");
+
+    if (input === "") {
+        alert("漢方番号を入力してください！");
+        return;
+    }
+
+    let selectedNumbers = parseInput(input);
+    let totalIngredients = {};
+    let missingNumbers = [];
+    let overdoseWarnings = [];
+
+    kampoDetails.innerHTML = "";
+    totalTable.innerHTML = "";
+
+    selectedNumbers.forEach(num => {
+        let normalizedNum = num.replace(/^0+/, "");
+        if (kampoData.hasOwnProperty(normalizedNum)) {
+            let detailHTML = `<h4 class="kampo-title" id="kampo-${normalizedNum}">漢方 ${normalizedNum}</h4><ul>`;
+
+            for (let ingredient in kampoData[normalizedNum]) {
+                let amount = kampoData[normalizedNum][ingredient];
+                totalIngredients[ingredient] = (totalIngredients[ingredient] || 0) + amount;
+                detailHTML += `<li>${ingredient}: ${amount}g</li>`;
+            }
+
+            detailHTML += "</ul>";
+
+            if (kampoLinks[normalizedNum]) {
+                detailHTML += `<a href="${kampoLinks[normalizedNum]}" class="kampo-link" target="_blank">詳細を見る</a>`;
+            }
+
+            kampoDetails.innerHTML += detailHTML;
+        } else {
+            missingNumbers.push(num);
+        }
+    });
+
+    // 成分合計の表示
+    if (Object.keys(totalIngredients).length > 0) {
+        for (let ingredient in totalIngredients) {
+            let row = `<tr><td>${ingredient}</td><td>${totalIngredients[ingredient]}g</td></tr>`;
+            totalTable.innerHTML += row;
+        }
+        printBtn.style.display = "block";
+    } else {
+        totalTable.innerHTML = "<tr><td colspan='2'>該当するデータがありません</td></tr>";
+        printBtn.style.display = "none";
+    }
+
+    // 過剰摂取の警告チェック-----------------------------------------------------
+    const overdoseLimit = {
+      "麻黄(マオウ)":7.5,
+      "大黄(ダイオウ)":7.5,
+      "甘草(カンゾウ)":5,
+      "附子(ブシ末)":4.5,
+      "茯苓(ブクリョウ)":6,
+      "生姜(ショウキョウ)":5,
+      "桂皮(ケイヒ)":5,
+       
+
+    };
+    //--------------------------------------------------------------------------
+
+    for (let ingredient in totalIngredients) {
+        if (overdoseLimit[ingredient] && totalIngredients[ingredient] >= overdoseLimit[ingredient]) {
+            overdoseWarnings.push(`${ingredient}: ${totalIngredients[ingredient]}g（上限 ${overdoseLimit[ingredient]}g）`);
+        }
+    }
+
+    // 過剰摂取の警告表示
+    if (overdoseWarnings.length > 0) {
+        kampoDetails.innerHTML += `<div class="warning-box">
+            <p>⚠️ <strong>この組み合わせでは以下の成分が過剰摂取の可能性があります！</strong></p>
+            <ul>${overdoseWarnings.map(text => `<li>${text}</li>`).join("")}</ul>
+        </div>`;
+    }
+
+    // 存在しない漢方の警告
+    if (missingNumbers.length > 0) {
+        kampoDetails.innerHTML += `<div class="info-box">
+            <p>❌ <strong>以下の漢方番号はデータにありません:</strong> ${missingNumbers.join(", ")}</p>
+        </div>`;
+    }
+
+    resultArea.classList.remove("hidden");
+}
+
+
+    function parseInput(input) {
+        return input
+            .replace(/[０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0)) // 全角数字を半角に変換
+            .split(",")
+            .map(num => num.trim().replace(/^0+/, "")) // 先頭の0を削除
+            .filter(num => num !== "");
+    }
+    
+  </script>
+
+</body>
+</html>
