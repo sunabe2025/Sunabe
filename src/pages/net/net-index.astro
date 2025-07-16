@@ -1,3 +1,8 @@
+---
+import Header from "../../components/header.astro";
+import Footer from "../../components/footer.astro";
+import "../../styles/style.css";
+---
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -42,21 +47,7 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <nav class="custom-nav">
-      <ul class="custom-nav-list">
-        <li><a href="https://sunabeclinichp.vivian.jp/">ホーム</a></li>
-        <li><a href="https://sunabekanpou.vivian.jp/index-kanpo.html">漢方専門</a></li>
-        <li><a href="https://sunabenaika.vivian.jp/index-naika.html">内科専門</a></li>
-        <li><a href="https://sunabekenko.vivian.jp/index.recipe.html">読者レシピ</a></li>
-        <li><a href="https://sunabekenko.vivian.jp/index.kenko.html">健康専門</a></li>
-        <li><a href="https://sunabeclinicnet.vivian.jp/">HP制作術</a></li>
-        <li><a href="#">LINE制作術</a></li>
-        <li><a href="https://sunabenutrition.vivian.jp/index-video.html">写真撮影術</a></li>
-        <li><a href="https://sunabeclinichp.vivian.jp/poemu.html">ラウンジ</a></li>
-      </ul>
-    </nav>
-  </header>
+<Header  />
 
   <main>
     <section>
@@ -97,14 +88,14 @@
 
       <section class="promo">
         <div class="sns-buttons">
-          <a href="hp/hp1.html"><img src="images/２.jpg" alt="hi1" class="fixed-size"></a>
-          <a href="hp/hp2.html"><img src="images/３.jpg" alt="hi2" class="fixed-size"></a>
-          <a href="hp/hp3.html"><img src="images/３ー.jpg" alt="hi2" class="fixed-size"></a>
-          <a href="hp/hp4.html"><img src="images/４.jpg" alt="hi2" class="fixed-size"></a>
-          <a href="hp/hp5.html"><img src="images/５.jpg" alt="hi2" class="fixed-size"></a>
-          <a href="HTML/index.html"><img src="images/６.jpg" alt="hi2" class="fixed-size"></a>
-          <a href="hp/hp7.html"><img src="images/７.jpg" alt="hi2" class="fixed-size"></a>
-          <a href="hp/hp8.html"><img src="images/８.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="hp/hp1.html"><img src="../images/２.jpg" alt="hi1" class="fixed-size"></a>
+          <a href="hp/hp2.html"><img src="../images/３.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="hp/hp3.html"><img src="../images/３ー.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="hp/hp4.html"><img src="../images/４.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="hp/hp5.html"><img src="../images/５.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="HTML/index.html"><img src="../images/６.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="hp/hp7.html"><img src="../images/７.jpg" alt="hi2" class="fixed-size"></a>
+          <a href="hp/hp8.html"><img src="../images/８.jpg" alt="hi2" class="fixed-size"></a>
 
 
         </div>
@@ -138,9 +129,7 @@
 
   <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button">LINEで予約する</a>
 
-  <footer>
-    <p>&copy; 2025 砂辺クリニック</p>
-  </footer>
+<Footer  />
 
   <script>
 
