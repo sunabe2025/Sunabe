@@ -153,6 +153,7 @@ import "../../styles/style.css";
 
     function updateTopSlideshow() {
       const topImage = document.getElementById("slideshow-top");
+      // @ts-ignore
       if (topImage) topImage.src = getTopImageForTime();
     }
 
@@ -417,7 +418,7 @@ const scheduleSample = [
     ];
 
 
-
+// @ts-ignore
     function getImageForSchedule(schedule) {
       const now = new Date();
       const hour = now.getHours();
@@ -441,7 +442,9 @@ const slideshowIds = [
 
     function updateAllSlideshows() {
       slideshowIds.forEach(([id, schedule]) => {
+        // @ts-ignore
         const element = document.getElementById(id);
+        // @ts-ignore
         if (element) element.src = getImageForSchedule(schedule);
       });
     }
@@ -485,6 +488,7 @@ const slideshowIds = [
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
+  // @ts-ignore
 const swiper = new Swiper(".mySwiper", {
   loop: true,
   autoplay: {

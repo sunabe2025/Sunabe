@@ -190,6 +190,7 @@ import "../../styles/style.css";
 
             function updateTopSlideshow() {
                 const topImage = document.getElementById("slideshow-top");
+                // @ts-ignore
                 if (topImage) topImage.src = getTopImageForTime();
             }
 
@@ -439,7 +440,7 @@ import "../../styles/style.css";
                 { startHour: 23, image: "images/005-003-07-001.gif" },
                 { startHour: 24, image: "images/005-011-10-001.gif" },
             ];
-
+            // @ts-ignore
             function getImageForSchedule(schedule) {
                 const now = new Date();
                 const hour = now.getHours();
@@ -462,7 +463,9 @@ import "../../styles/style.css";
 
             function updateAllSlideshows() {
                 slideshowIds.forEach(([id, schedule]) => {
+                    // @ts-ignore
                     const element = document.getElementById(id);
+                    // @ts-ignore
                     if (element) element.src = getImageForSchedule(schedule);
                 });
             }
