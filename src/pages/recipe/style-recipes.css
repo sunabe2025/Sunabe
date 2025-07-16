@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+  text-align: center;
+}
+
+/* ヘッダー */
+header {
+  background: #009688;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1em;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.95em;
+}
+
+/* メイン */
+main {
+  padding: 20px;
+}
+
+/* ポップアップガイド */
+.popup-guide {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 24px;
+  font-size: 0.9em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.6s ease;
+  z-index: 1000;
+}
+
+.popup-guide span {
+  margin-left: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 画像リスト */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.recipe-btn {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.recipe-btn img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.recipe-btn img:hover {
+  transform: scale(1.05);
+}
+
+/* アニメーション */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* フッター */
+footer {
+  background: #ececec;
+  color: #555;
+  padding: 16px;
+  font-size: 0.85em;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 30px 10px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .popup-guide {
+    font-size: 0.8em;
+    padding: 10px 14px;
+  }
+}
+
+/* レスポンシブ対応の画像グリッドとカード */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photo-card {
+  display: block;
+  text-decoration: none;
+  border: 2px solid #333;
+  background: #e0f7fa;
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-card:hover {
+  transform: scale(1.03);
+}
+
+.photo-caption {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* 豆カテゴリ：食材ボタンの見た目調整 */
+.bean-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  list-style: none;
+}
+
+.bean-list li {
+
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.bean-list li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
