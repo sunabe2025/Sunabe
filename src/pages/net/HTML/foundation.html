@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTMLの土台とは？</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">HTMLの土台とは？</a></h1>
+      <p>ホームページ作りの最初の一歩を理解しよう！</p>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="メニューを開く">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="foundation.html">HTMLの土台</a></li>
+          <li><a href="design.html">CSSでデザイン</a></li>
+          <li><a href="image.html">画像を入れよう</a></li>
+          <li><a href="link.html">リンクを貼る</a></li>
+          <li><a href="form.html">フォームを作る</a></li>
+          <li><a href="sample.html">サンプルページ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>1. HTMLの「土台」ってなに？</h2>
+      <p>HTMLは、Webページを作るための「骨組み」のようなものです。</p>
+      <p>家を建てるときに最初に柱や壁を立てるように、Webページにも「基本の形」が必要です。</p>
+      <p>その基本構造が、以下のようなHTMLコードです：</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;ページのタイトル&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;見出し&lt;/h1&gt;
+    &lt;p&gt;ここに文章を書きます。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </section>
+
+    <section>
+      <h2>2. 主なタグの意味</h2>
+      <ul>
+        <li>
+          <strong>&lt;!DOCTYPE html&gt;</strong>：
+          この文書がHTML5で書かれていることをブラウザに伝えます。
+        </li>
+        <li>
+          <strong>&lt;html&gt;〜&lt;/html&gt;</strong>：
+          HTML文書の始まりと終わりを示します。
+        </li>
+        <li>
+          <strong>&lt;head&gt;〜&lt;/head&gt;</strong>：
+          Webページの裏側の情報（文字コード、タイトル、CSSの読み込みなど）を記述します。
+        </li>
+        <li>
+          <strong>&lt;body&gt;〜&lt;/body&gt;</strong>：
+          実際に画面に表示される内容（見出し、文章、画像など）を記述します。
+        </li>
+      </ul>
+      <p>タグは <code>&lt;〇〇&gt;</code> で始まり、 <code>&lt;/〇〇&gt;</code> で閉じるのが基本です。</p>
+    </section>
+
+    <section>
+      <h2>3. 実際に書いてみよう！</h2>
+      <p>下のコードをコピーして、自分のパソコンのメモ帳やエディタに貼り付けてみましょう。</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;はじめてのHTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;ようこそ！&lt;/h1&gt;
+    &lt;p&gt;これは、はじめて作ったページです。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <p><strong>index.html</strong> という名前で保存して、ブラウザで開くと、自分のWebページが表示されます！</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025</p>
+  </footer>
+</body>
+
+</html>

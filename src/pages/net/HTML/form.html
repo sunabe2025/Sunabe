@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>フォームを作ろう</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">フォームを作ろう</a></h1>
+      <p>名前やメッセージを入力してもらうページを作ってみよう！</p>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="メニューを開く">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="foundation.html">HTMLの土台</a></li>
+          <li><a href="design.html">CSSでデザイン</a></li>
+          <li><a href="image.html">画像を入れよう</a></li>
+          <li><a href="link.html">リンクを貼る</a></li>
+          <li><a href="form.html">フォームを作る</a></li>
+          <li><a href="sample.html">サンプルページ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>1. フォームってなに？</h2>
+      <p>フォームとは、ユーザーから「名前」や「メッセージ」などの情報を入力してもらうためのパーツです。</p>
+      <p>たとえば、お問い合わせページやアンケートなどによく使われます。</p>
+    </section>
+
+    <section>
+      <h2>2. 基本的なフォームの書き方</h2>
+      <p>次のようなHTMLを書けば、シンプルなフォームが作れます。</p>
+      <pre><code>&lt;form&gt;
+  &lt;label&gt;お名前：&lt;/label&gt;
+  &lt;input type="text" name="name"&gt;&lt;br&gt;
+
+  &lt;label&gt;メッセージ：&lt;/label&gt;&lt;br&gt;
+  &lt;textarea name="message"&gt;&lt;/textarea&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="送信"&gt;
+&lt;/form&gt;
+</code></pre>
+      <p>ここで使われている主なタグは：</p>
+      <ul>
+        <li><code>&lt;form&gt;</code>：フォームの始まりと終わりを囲みます</li>
+        <li><code>&lt;label&gt;</code>：入力欄にラベル（名前）をつけます</li>
+        <li><code>&lt;input type="text"&gt;</code>：1行の入力欄</li>
+        <li><code>&lt;textarea&gt;</code>：複数行のメッセージ欄</li>
+        <li><code>&lt;input type="submit"&gt;</code>：送信ボタン</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. 表示例</h2>
+      <form>
+        <label>お名前：</label>
+        <input type="text" name="name"><br><br>
+
+        <label>メッセージ：</label><br>
+        <textarea name="message" rows="4" cols="40"></textarea><br><br>
+
+        <input type="submit" value="送信">
+      </form>
+    </section>
+
+    <section>
+      <h2>4. 実際のフォームとして使うには？</h2>
+      <p>このままだと送信ボタンを押しても何も起きません。</p>
+      <p>実際に送信機能を付けるには、<strong>プログラム（JavaScriptやPHPなど）</strong>を使う必要があります。</p>
+      <p>でもまずは「見た目」や「構造」を作ることが大事です。今は形を覚えましょう！</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector(".nav-list");
+
+      toggle.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

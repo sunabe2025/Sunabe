@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>サンプルページを見てみよう</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">サンプルページを見てみよう</a></h1>
+      <p>ここまで学んだことを使って、どんなページが作れるのか見てみよう！</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="foundation.html">HTMLの土台</a></li>
+          <li><a href="design.html">CSSでデザイン</a></li>
+          <li><a href="image.html">画像を入れよう</a></li>
+          <li><a href="link.html">リンクを貼る</a></li>
+          <li><a href="form.html">フォームを作る</a></li>
+          <li><a href="sample.html">サンプルページ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>1. サンプルページとは？</h2>
+      <p>これまで学んできたHTMLとCSSの内容を使って作った、架空のお店のホームページです。</p>
+      <p>実際にコードを組み合わせると、どんな見た目になるのかを確認できます。</p>
+    </section>
+
+    <section>
+      <h2>2. サンプルページを開いてみよう</h2>
+      <p>
+        <a href="sample-site/index.html" target="_blank" class="btn">▶ サンプルページを開く</a>
+      </p>
+      <small>※このページは学習用に作られた架空の店舗です。本物のお店ではありません。</small>
+    </section>
+
+    <section>
+      <h2>3. 見るときのポイント</h2>
+      <ul>
+        <li>HTMLで「どこが」「どう書かれているか」を思い出しながら見てみよう</li>
+        <li>CSSで色やレイアウトがどう変わっているかにも注目しよう</li>
+        <li>気に入った部分は、自分のページでもマネしてOK！</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. 次はどうすればいい？</h2>
+      <p>ここまでで、Webページの基本はしっかり体験できました。</p>
+      <p>このあとやってみるといいこと：</p>
+      <ul>
+        <li>自分のプロフィールページを作ってみる</li>
+        <li>好きなお店や趣味を紹介するサイトを作ってみる</li>
+        <li>複数ページをつなげて「自分だけのホームページ」にチャレンジ！</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector(".nav-list");
+
+      toggle.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>メニュー | 焼肉 炎神 - ENJIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー（index.htmlと同じ構造） -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="title-nav">
+        <h1>焼肉 炎神 - ENJIN</h1>
+        <button class="menu-toggle" aria-label="メニューを開く">☰</button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- メイン -->
+  <main>
+    <section class="intro">
+      <h2>MENU</h2>
+      <p>黒毛和牛を中心に、こだわりの逸品をご用意しております。</p>
+    </section>
+
+    <section class="highlight">
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>特上カルビ</strong> ・・・2,480円</li>
+        <li><strong>厚切りタン塩</strong> ・・・2,200円</li>
+        <li><strong>プレミアム生ビール</strong> ・・・650円</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 焼肉 炎神 - ENJIN</p>
+    <small>※こちらは実在しない架空の店舗を題材とした、ホームページ制作の練習用サンプルです。</small>
+  </footer>
+
+  <!-- ハンバーガーJS -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggleButton.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

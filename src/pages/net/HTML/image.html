@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>画像を入れてみよう</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="index.html" style="color: inherit; text-decoration: none;">画像を入れてみよう</a></h1>
+      <p>写真やイラストでページをもっと楽しく！</p>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="メニューを開く">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="foundation.html">HTMLの土台</a></li>
+          <li><a href="design.html">CSSでデザイン</a></li>
+          <li><a href="image.html">画像を入れよう</a></li>
+          <li><a href="link.html">リンクを貼る</a></li>
+          <li><a href="form.html">フォームを作る</a></li>
+          <li><a href="sample.html">サンプルページ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>1. 画像の基本</h2>
+      <p>HTMLで画像を表示するには、<code>&lt;img&gt;</code> タグを使います。</p>
+      <p>たとえば、次のように書きます：</p>
+      <pre><code>&lt;img src="images/sample.jpg" alt="サンプル画像"&gt;</code></pre>
+      <p><strong>src</strong>（ソース）は画像のファイルパス、<strong>alt</strong> は「画像が表示されなかったときの説明文」です。</p>
+    </section>
+
+    <section>
+      <h2>2. 実際に表示してみよう</h2>
+      <p>上記のコードを書くと、こんなふうに画像が表示されます（※画像ファイルがある場合）：</p>
+      <img src="images/sample.jpg" alt="サンプル画像" class="sample-img">
+    </section>
+
+    <section>
+      <h2>3. よく使う画像サイズ調整</h2>
+      <p>CSSで画像のサイズを変えることもできます。</p>
+      <pre><code>img {
+  width: 300px;
+  border-radius: 10px;
+}</code></pre>
+      <p>これで、画像の横幅を 300ピクセル にし、角を丸くできます。</p>
+    </section>
+
+    <section>
+      <h2>4. 画像を使うときの注意点</h2>
+      <ul>
+        <li><strong>画像ファイルは必ず同じフォルダ内にあるか、正しいパスで指定</strong>しましょう</li>
+        <li><strong>alt属性</strong>はアクセシビリティの観点でも重要です（音声読み上げにも対応）</li>
+        <li>ファイル名は <code>sample.JPG</code> と <code>sample.jpg</code> は違うと認識されます（大文字小文字に注意）</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025</p>
+  </footer>
+</body>
+
+</html>

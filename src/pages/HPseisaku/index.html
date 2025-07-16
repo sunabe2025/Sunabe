@@ -3,77 +3,101 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>焼肉 炎神 - ENJIN</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMLとCSSでホームページを作ってみましょう</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <header class="site-header">
-    <div class="header-inner">
+    <div class="container">
+      <h1>ホームページを作ってみましょう</h1>
+      <p>HTMLとCSSを使って、実際にサイトを作ってみましょう</p>
+      <nav class="nav">
+        <button class="menu-toggle" aria-label="メニューを開く">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="foundation.html">HTMLの土台</a></li>
+          <li><a href="design.html">CSSでデザイン</a></li>
+          <li><a href="image.html">画像を入れよう</a></li>
+          <li><a href="link.html">リンクを貼る</a></li>
+          <li><a href="form.html">フォームを作る</a></li>
+          <li><a href="sample.html">サンプルページ</a></li>
+        </ul>
+      </nav>
 
-      <div class="title-nav">
-        <h1>焼肉 炎神 - ENJIN</h1>
-        <button class="menu-toggle" aria-label="メニューを開く">☰</button>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="menu.html">メニュー</a></li>
-          </ul>
-        </nav>
-      </div>
     </div>
   </header>
 
-
-
-
-  <section class="hero">
-    <div class="hero-content">
-      <h2>極上の焼肉を、<br class="sp-only">最高の空間で。</h2>
-      <p>厳選黒毛和牛 × 匠の技</p>
-      <p>
-        ※こちらは実在しない架空の店舗を題材とした、ホームページ制作の練習用サンプルです。
-      </p>
-
-      <a href="contact.html" class="hero-btn">ご予約はこちら</a>
-    </div>
-  </section>
-
-
-
-  <main>
-    <section class="intro">
-      <h2>ご挨拶</h2>
-      <p>ようこそ「焼肉 炎神 - ENJIN」へ。<br>
-        私たちは、素材・焼き加減・雰囲気にとことんこだわった本格焼肉をご提供しています。</p>
+  <main class="container">
+    <section id="html">
+      <a href="foundation.html">
+        <h2>1. ページの土台を作る</h2>
+      </a>
+      <p>まずはHTMLでページの土台を作りましょう。下のように「見出し」と「文章」を書いてみます。</p>
+      <pre><code>&lt;h1&gt;ようこそ！&lt;/h1&gt;
+&lt;p&gt;これははじめて作ったホームページです。&lt;/p&gt;</code></pre>
     </section>
 
-    <section class="highlight">
-      <h2>こだわりの肉</h2>
-      <img src="images/image1.png" alt="焼肉画像">
-      <p>一頭買いの黒毛和牛を、熟練の技で一枚一枚丁寧にご提供。</p>
+    <section id="css">
+      <a href="design.html">
+        <h2>2. デザインしてみよう</h2>
+      </a>
+      <p>次にCSSを使って色やレイアウトを整えます。以下のようなコードをstyle.cssに書いてみましょう。</p>
+      <pre><code>body {
+  background-color: #f0f8ff;
+  font-family: sans-serif;
+  padding: 20px;
+}</code></pre>
+    </section>
+
+    <section id="image">
+      <a href="image.html">
+        <h2>3. 画像を入れてみよう</h2>
+      </a>
+      <p>画像は見た目の印象を大きく変える要素です。好きな写真やイラストを入れてみましょう。</p>
+      <pre><code>&lt;img src="images/my-photo.jpg" alt="自分の写真"&gt;</code></pre>
+      <img src="images/sample.jpg" alt="サンプル画像">
+    </section>
+
+    <section id="link">
+      <a href="link.html">
+        <h2>4. リンクを貼ろう</h2>
+      </a>
+      <p>自分のSNSや別のページにつながるリンクをつけてみましょう。</p>
+      <pre><code>&lt;a href="https://example.com"&gt;わたしのページへ&lt;/a&gt;</code></pre>
+      <p>実例：<a href="https://example.com" target="_blank">わたしのページへ</a></p>
+    </section>
+
+    <section id="sample">
+      <a href="sample.html">
+        <h2>5. サンプルページを見てみましょう</h2>
+      </a>
+      <p>ここまで学んだ内容を使って、実際に完成されたサンプルページを見てみましょう！</p>
+      <p><a href="sample-site/index.html" target="_blank" class="hero-btn">サンプルページを開く</a></p>
+      <small>※こちらは実在しない架空の店舗を題材とした、ホームページ制作の練習用サンプルです。</small>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 焼肉 炎神 - ENJIN</p>
-    <small>※こちらは実在しない架空の店舗を題材とした、ホームページ制作の練習用サンプルです。</small>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025</p>
+    </div>
   </footer>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
 
-  <script>
-    // メニューボタンとナビゲーションを取得
-    const toggleButton = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-
-    // ボタンがクリックされたら open クラスをトグル
-    toggleButton.addEventListener('click', () => {
-      nav.classList.toggle('open');
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
     });
-  </script>
+  });
+</script>
 
+
+  
 
 </body>
 
