@@ -4,30 +4,39 @@ import Footer from "../../components/footer.astro";
 import "../../styles/style.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>砂辺クリニック漢方</title>
+        <link rel="stylesheet" href="style-main.css" />
+        <script src="https://js.ptengine.jp/554zwt96.js"></script>
+        <meta
+            name="description"
+            content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>砂辺クリニック漢方</title>
-    <link rel="stylesheet" href="style-main.css">
-    <script src="https://js.ptengine.jp/554zwt96.js"></script>
-    <meta name="description" content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。">
-</head>
+    <body>
+        <Header />
 
-<body>
-<Header  />
+        <main>
+            <section>
+                <h1>砂辺クリニック漢方</h1>
+                <img
+                    id="slideshow-top"
+                    class="responsive-img"
+                    alt="トップ画像"
+                />
+                <h2>予約のない方の待ち時間は長くなっています。</h2>
+            </section>
 
-    <main>
-        <section>
-            <h1>砂辺クリニック漢方</h1>
-            <img id="slideshow-top" class="responsive-img" alt="トップ画像" />
-            <h2>予約のない方の待ち時間は長くなっています。</h2>
-        </section>
-
-        <section class="narration">
-            <img src="../images/sumairut.jpg" alt="雲の上の女性" style="
+            <section class="narration">
+                <img
+                    src="../images/sumairut.jpg"
+                    alt="雲の上の女性"
+                    style="
         width: 90%;
         max-width: 600px;
         height: auto;
@@ -35,394 +44,450 @@ import "../../styles/style.css";
         margin: 0 auto 20px auto;
         border-radius: 15px;
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    ">
+    "
+                />
 
-            <audio controls style="width: 90%; max-width: 600px; display: block; margin: 0 auto;">
-                <source src="../images/sumairua.mp3" type="audio/mp3">
-                お使いのブラウザは audio タグに対応していません。
-            </audio>
-        </section>
+                <audio
+                    controls
+                    style="width: 90%; max-width: 600px; display: block; margin: 0 auto;"
+                >
+                    <source src="../images/sumairua.mp3" type="audio/mp3" />
+                    お使いのブラウザは audio タグに対応していません。
+                </audio>
+            </section>
 
-        <section class="promo">
-            <div class="sns-buttons">
-                <a href="https://lin.ee/56a0xBp"><img src="../images/10000.jpg" alt="LINE予約1" class="fixed-size"></a>
-                <a href="https://lin.ee/56a0xBp"><img src="../images/10001.jpg" alt="LINE予約2" class="fixed-size"></a>
-                <a href="tel:098-936-6270"><img src="../images/10002.jpg" alt="電話" class="fixed-size"></a>
+            <section class="promo">
+                <div class="sns-buttons">
+                    <a href="https://lin.ee/56a0xBp"
+                        ><img
+                            src="../images/10000.jpg"
+                            alt="LINE予約1"
+                            class="fixed-size"
+                        /></a
+                    >
+                    <a href="https://lin.ee/56a0xBp"
+                        ><img
+                            src="../images/10001.jpg"
+                            alt="LINE予約2"
+                            class="fixed-size"
+                        /></a
+                    >
+                    <a href="tel:098-936-6270"
+                        ><img
+                            src="../images/10002.jpg"
+                            alt="電話"
+                            class="fixed-size"
+                        /></a
+                    >
+                </div>
+            </section>
+
+            <section class="promo">
+                <div class="sns-buttons">
+                    <a href="/kanpoNo/kanpoNo"
+                        ><img
+                            src="../images/bangoukensaku.jpg"
+                            class="fixed-size"
+                        /></a
+                    >
+                    <a href="/syoujyou/syoujyou"
+                        ><img
+                            src="../images/syoujyoukensaku.jpg"
+                            class="fixed-size"
+                        /></a
+                    >
+                    <a href=""
+                        ><img
+                            src="../images/kanijiten.jpg"
+                            class="fixed-size"
+                        /></a
+                    >
+                </div>
+            </section>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <h2>漢方成分計算機</h2>
+                <iframe
+                    src="solver"
+                    width="100%"
+                    height="600"
+                    style="border: 2px solid #ccc; border-radius: 8px;"
+                ></iframe>
             </div>
-        </section>
 
-        <section class="promo">
-            <div class="sns-buttons">
-                <a href="/kanpoNo/kanpoNo"><img src="../images/bangoukensaku.jpg" class="fixed-size"></a>
-                <a href="/syoujyou/syoujyou"><img src="../images/syoujyoukensaku.jpg" class="fixed-size"></a>
-                <a href=""><img src="../images/kanijiten.jpg" class="fixed-size"></a>
+            <section class="slides">
+                <h2>漢方豆辞典：その１<br />（毎時間１日２４回更新）</h2>
+                <img
+                    id="slideshow-1"
+                    class="responsive-img fade-up"
+                    alt="スライド1"
+                />
+                <h2>漢方豆辞典：その２<br />（毎時間１日２４回更新）</h2>
+                <img
+                    id="slideshow-2"
+                    class="responsive-img fade-up"
+                    alt="スライド2"
+                />
+                <h2>院長のワンショット<br />（毎時間１日２４回上映）</h2>
+                <img
+                    id="slideshow-3"
+                    class="responsive-img fade-up"
+                    alt="スライド3"
+                />
+                <h2>はやくなおれ・治れ<br />（毎時間１日２４回上映）</h2>
+                <img
+                    id="slideshow-4"
+                    class="responsive-img fade-up"
+                    alt="スライド4"
+                />
+                <h2>
+                    漢方ご紹介<br />桂枝茯苓丸加薏苡仁（毎時間１日２４回上映）
+                </h2>
+                <img
+                    id="slideshow-5"
+                    class="responsive-img fade-up"
+                    alt="スライド5"
+                />
+            </section>
 
-            </div>
-        </section>
+            <section class="calendar">
+                <img
+                    src="../images/7gatu1.jpg"
+                    class="responsive-img"
+                    alt="6月"
+                />
+                <img
+                    src="../images/8gatu1.jpg"
+                    class="responsive-img"
+                    alt="7月"
+                />
+            </section>
+        </main>
 
-        <div style="text-align: center; margin: 40px 0;">
-            <h2>漢方成分計算機</h2>
-            <iframe src="solver" width="100%" height="600"
-                style="border: 2px solid #ccc; border-radius: 8px;"></iframe>
-        </div>
+        <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button"
+            >LINEで予約する</a
+        >
 
+        <Footer />
 
-        <section class="slides">
-            <h2>漢方豆辞典：その１<br>（毎時間１日２４回更新）</h2>
-            <img id="slideshow-1" class="responsive-img fade-up" alt="スライド1">
-            <h2>漢方豆辞典：その２<br>（毎時間１日２４回更新）</h2>
-            <img id="slideshow-2" class="responsive-img fade-up" alt="スライド2">
-            <h2>院長のワンショット<br>（毎時間１日２４回上映）</h2>
-            <img id="slideshow-3" class="responsive-img fade-up" alt="スライド3">
-            <h2>はやくなおれ・治れ<br>（毎時間１日２４回上映）</h2>
-            <img id="slideshow-4" class="responsive-img fade-up" alt="スライド4">
-            <h2>漢方ご紹介<br>桂枝茯苓丸加薏苡仁（毎時間１日２４回上映）</h2>
-            <img id="slideshow-5" class="responsive-img fade-up" alt="スライド5">
-        </section>
+        <script>
+            const scheduleTop = [
+                { startHour: 3, image: "../images/heizitu5.gif" },
+                { startHour: 14, image: "../images/heizitu5.gif" },
+                { startHour: 15, image: "../images/heizitu5.gif" },
+                { startHour: 18, image: "../images/heizitu5.gif" },
+            ];
 
-        <section class="calendar">
-            <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月">
-            <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月">
-        </section>
-    </main>
-
-    <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button">LINEで予約する</a>
-
-<Footer  />
-
-    <script>
-
-        const scheduleTop = [
-            { startHour: 3, image: "../images/heizitu5.gif" },
-            { startHour: 14, image: "../images/heizitu5.gif" },
-            { startHour: 15, image: "../images/heizitu5.gif" },
-            { startHour: 18, image: "../images/heizitu5.gif" }
-        ];
-
-        function getTopImageForTime() {
-            const now = new Date();
-            const hour = now.getHours();
-            for (let i = scheduleTop.length - 1; i >= 0; i--) {
-                if (hour >= scheduleTop[i].startHour) return scheduleTop[i].image;
+            function getTopImageForTime() {
+                const now = new Date();
+                const hour = now.getHours();
+                for (let i = scheduleTop.length - 1; i >= 0; i--) {
+                    if (hour >= scheduleTop[i].startHour)
+                        return scheduleTop[i].image;
+                }
+                return scheduleTop[0].image;
             }
-            return scheduleTop[0].image;
-        }
 
-        function updateTopSlideshow() {
-            const topImage = document.getElementById("slideshow-top");
-            if (topImage) topImage.src = getTopImageForTime();
-        }
-
-        updateTopSlideshow();
-        setInterval(updateTopSlideshow, 10 * 60 * 1000);
-
-
-        const scheduleInfo = [
-            { startHour: 0, image: "../images/mid-2.gif" },
-            { startHour: 1, image: "../images/mid-3.gif" },
-            { startHour: 2, image: "../images/mid-1.gif" },
-            { startHour: 3, image: "../images/mid-2.gif" },
-            { startHour: 4, image: "../images/mid-3.gif" },
-            { startHour: 5, image: "../images/mor-5.gif" },
-            { startHour: 6, image: "../images/mor-6.gif" },
-            { startHour: 7, image: "../images/mor-7.gif" },
-            { startHour: 8, image: "../images/mor-8.gif" },
-            { startHour: 9, image: "../images/mor-9.gif" },
-            { startHour: 10, image: "../images/mor-10.gif" },
-            { startHour: 12, image: "../images/kon-5.gif" },
-            { startHour: 13, image: "../images/kon-5.gif" },
-            { startHour: 14, image: "../images/kon-6.gif" },
-            { startHour: 15, image: "../images/aft-1.gif" },
-            { startHour: 16, image: "../images/aft-2.gif" },
-            { startHour: 17, image: "../images/aft-3.gif" },
-            { startHour: 18, image: "../images/aft-4.gif" },
-            { startHour: 19, image: "../images/oya-2.gif" },
-            { startHour: 20, image: "../images/oya-3.gif" },
-            { startHour: 21, image: "../images/oya-4.gif" },
-            { startHour: 22, image: "../images/oya-5.gif" },
-            { startHour: 23, image: "../images/mid-1.gif" },
-        ];
-
-        const schedule1 = [
-            { startHour: 0, image: "../images/kans1.jpg" },
-            { startHour: 1, image: "../images/kans2.jpg" },
-            { startHour: 2, image: "../images/kans3.jpg" },
-            { startHour: 3, image: "../images/kans4.jpg" },
-            { startHour: 4, image: "../images/kans5.jpg" },
-            { startHour: 5, image: "../images/kans6.jpg" },
-            { startHour: 6, image: "../images/kans7.jpg" },
-            { startHour: 7, image: "../images/kans8.jpg" },
-            { startHour: 8, image: "../images/kans10.jpg" },
-            { startHour: 9, image: "../images/kans11.jpg" },
-            { startHour: 10, image: "../images/kans12.jpg" },
-            { startHour: 11, image: "../images/kans1.jpg" },
-            { startHour: 12, image: "../images/kans2.jpg" },
-            { startHour: 13, image: "../images/kans3.jpg" },
-            { startHour: 14, image: "../images/kans4.jpg" },
-            { startHour: 15, image: "../images/kans5.jpg" },
-            { startHour: 16, image: "../images/kans6.jpg" },
-            { startHour: 17, image: "../images/kans7.jpg" },
-            { startHour: 18, image: "../images/kans8.jpg" },
-            { startHour: 19, image: "../images/kans9.jpg" },
-            { startHour: 20, image: "../images/kans10.jpg" },
-            { startHour: 21, image: "../images/kans11.jpg" },
-            { startHour: 22, image: "../images/kans12.jpg" },
-            { startHour: 23, image: "../images/kans13.jpg" }
-        ];
-
-
-
-
-        const schedule2 = [
-
-            { startHour: 0, image: "../images/kans14.jpg" },
-            { startHour: 1, image: "../images/kans15.jpg" },
-            { startHour: 2, image: "../images/kans16.jpg" },
-            { startHour: 3, image: "../images/kans17.jpg" },
-            { startHour: 4, image: "../images/kans18.jpg" },
-            { startHour: 5, image: "../images/kans19.jpg" },
-            { startHour: 6, image: "../images/kans20.jpg" },
-            { startHour: 7, image: "../images/kans21.jpg" },
-            { startHour: 8, image: "../images/kans22.jpg" },
-            { startHour: 9, image: "../images/kans23.jpg" },
-            { startHour: 10, image: "../images/kans14.jpg" },
-            { startHour: 11, image: "../images/kans15.jpg" },
-            { startHour: 12, image: "../images/kans16.jpg" },
-            { startHour: 13, image: "../images/kans17.jpg" },
-            { startHour: 14, image: "../images/kans18.jpg" },
-            { startHour: 15, image: "../images/kans19.jpg" },
-            { startHour: 16, image: "../images/kans20.jpg" },
-            { startHour: 17, image: "../images/kans21.jpg" },
-            { startHour: 18, image: "../images/kans22.jpg" },
-            { startHour: 19, image: "../images/kans23.jpg" },
-            { startHour: 20, image: "../images/kans14.jpg" },
-            { startHour: 21, image: "../images/kans15.jpg" },
-            { startHour: 22, image: "../images/kans16.jpg" },
-            { startHour: 23, image: "../images/kans17.jpg" }
-        ];
-
-
-        const schedule3 = [
-            { startHour: 0, image: "../images/wan7.gif" },
-            { startHour: 1, image: "../images/wan8.gif" },
-            { startHour: 2, image: "../images/wan9.gif" },
-            { startHour: 3, image: "../images/wan1.gif" },
-            { startHour: 4, image: "../images/wan1.gif" },
-            { startHour: 5, image: "../images/wan2.gif" },
-            { startHour: 6, image: "../images/wan3.gif" },
-            { startHour: 7, image: "../images/wan4.gif" },
-            { startHour: 8, image: "../images/wan5.gif" },
-            { startHour: 9, image: "../images/wan6.gif" },
-            { startHour: 10, image: "../images/wan7.gif" },
-            { startHour: 11, image: "../images/wan8.gif" },
-            { startHour: 12, image: "../images/hi1.gif" },
-            { startHour: 13, image: "../images/wan10.gif" },
-            { startHour: 14, image: "../images/wan11.gif" },
-            { startHour: 15, image: "../images/wan12.gif" },
-            { startHour: 16, image: "../images/wan13.gif" },
-            { startHour: 17, image: "../images/wan14.gif" },
-            { startHour: 18, image: "../images/wan5.gif" },
-            { startHour: 19, image: "../images/wan6.gif" },
-            { startHour: 20, image: "../images/wan7.gif" },
-            { startHour: 21, image: "../images/wan8.gif" },
-            { startHour: 22, image: "../images/wan9.gif" },
-            { startHour: 23, image: "../images/wan10.gif" },
-
-        ];
-
-        const schedule4 = [
-            { startHour: 0, image: "../images/kg4.gif" },
-            { startHour: 1, image: "../images/kg3.gif" },
-            { startHour: 2, image: "../images/kg2.gif" },
-            { startHour: 3, image: "../images/kg1.gif" },
-            { startHour: 4, image: "../images/kg10.gif" },
-            { startHour: 5, image: "../images/kg19.gif" },
-            { startHour: 6, image: "../images/kg18.gif" },
-            { startHour: 7, image: "../images/kg17.gif" },
-            { startHour: 8, image: "../images/kg16.gif" },
-            { startHour: 9, image: "../images/kg15.gif" },
-            { startHour: 10, image: "../images/kg14.gif" },
-            { startHour: 11, image: "../images/kg14.gif" },
-            { startHour: 12, image: "../images/kg13.gif" },
-            { startHour: 13, image: "../images/kg12.gif" },
-            { startHour: 14, image: "../images/kg11.gif" },
-            { startHour: 15, image: "../images/kg10.gif" },
-            { startHour: 16, image: "../images/kg9.gif" },
-            { startHour: 17, image: "../images/kg8.gif" },
-            { startHour: 18, image: "../images/kg7.gif" },
-            { startHour: 19, image: "../images/kg6.gif" },
-            { startHour: 20, image: "../images/kg5.gif" },
-            { startHour: 21, image: "../images/kg4.gif" },
-            { startHour: 22, image: "../images/kg3.gif" },
-            { startHour: 23, image: "../images/kg2.gif" },
-            { startHour: 24, image: "../images/kg1.gif" }
-        ];
-
-        const schedule5 = [
-            { startHour: 0, image: "../images/125-1k.jpg" },
-            { startHour: 1, image: "../images/125-2k.jpg" },
-            { startHour: 2, image: "../images/125-3k.jpg" },
-            { startHour: 3, image: "../images/125-4k.jpg" },
-            { startHour: 4, image: "../images/125-1k.jpg" },
-            { startHour: 5, image: "../images/125-2k.jpg" },
-            { startHour: 6, image: "../images/125-3k.jpg" },
-            { startHour: 7, image: "../images/125-4k.jpg" },
-            { startHour: 8, image: "../images/125-1k.jpg" },
-            { startHour: 9, image: "../images/125-2k.jpg" },
-            { startHour: 10, image: "../images/125-3k.jpg" },
-            { startHour: 11, image: "../images/125-4k.jpg" },
-            { startHour: 12, image: "../images/125-1k.jpg" },
-            { startHour: 13, image: "../images/125-2k.jpg" },
-            { startHour: 14, image: "../images/125-3k.jpg" },
-            { startHour: 15, image: "../images/125-4k.jpg" },
-            { startHour: 16, image: "../images/125-1k.jpg" },
-            { startHour: 17, image: "../images/125-2k.jpg" },
-            { startHour: 18, image: "../images/125-3k.jpg" },
-            { startHour: 19, image: "../images/125-4k.jpg" },
-            { startHour: 20, image: "../images/125-1k.jpg" },
-            { startHour: 21, image: "../images/125-2k.jpg" },
-            { startHour: 22, image: "../images/125-3k.jpg" },
-            { startHour: 23, image: "../images/125-4k.jpg" }
-        ];
-
-
-        const schedule6 = [
-            { startHour: 0, image: "images/004001.gif" },
-            { startHour: 1, image: "images/004002.gif" },
-            { startHour: 2, image: "images/004003.gif" },
-            { startHour: 3, image: "images/004004.gif" },
-            { startHour: 4, image: "images/004005.gif" },
-            { startHour: 5, image: "images/004006.gif" },
-            { startHour: 6, image: "images/004007.gif" },
-            { startHour: 7, image: "images/004008.gif" },
-            { startHour: 8, image: "images/004009.gif" },
-            { startHour: 9, image: "images/004010.gif" },
-            { startHour: 10, image: "images/004011.gif" },
-            { startHour: 11, image: "images/004012.gif" },
-            { startHour: 12, image: "images/004013.gif" },
-            { startHour: 13, image: "images/004014.gif" },
-            { startHour: 14, image: "images/004015.gif" },
-            { startHour: 15, image: "images/004016.gif" },
-            { startHour: 16, image: "images/004017.gif" },
-            { startHour: 17, image: "images/004018.gif" },
-            { startHour: 18, image: "images/004019.gif" },
-            { startHour: 19, image: "images/004020.gif" },
-            { startHour: 20, image: "images/004021.gif" },
-            { startHour: 21, image: "images/004022.gif" },
-            { startHour: 22, image: "images/004001.gif" },
-            { startHour: 23, image: "images/004002.gif" }
-        ];
-
-        const schedule7 = [
-            { startHour: 0, image: "images/009001.gif" },
-            { startHour: 1, image: "images/009002.gif" },
-            { startHour: 2, image: "images/009003.gif" },
-            { startHour: 3, image: "images/009004.gif" },
-            { startHour: 4, image: "images/009005.gif" },
-            { startHour: 5, image: "images/009006.gif" },
-            { startHour: 6, image: "images/009007.gif" },
-            { startHour: 7, image: "images/009010.gif" },
-            { startHour: 8, image: "images/09011.gif" },
-            { startHour: 9, image: "images/09012.gif" },
-            { startHour: 10, image: "images/09013.gif" },
-            { startHour: 11, image: "images/09014.gif" },
-            { startHour: 12, image: "images/09015.gif" },
-            { startHour: 13, image: "images/09016.gif" },
-            { startHour: 14, image: "images/09017.gif" },
-            { startHour: 15, image: "images/09018.gif" },
-            { startHour: 16, image: "images/09019.gif" },
-            { startHour: 17, image: "images/09020.gif" },
-            { startHour: 18, image: "images/09021.gif" },
-            { startHour: 19, image: "images/09022.gif" },
-            { startHour: 20, image: "images/09023.gif" },
-            { startHour: 21, image: "images/09024.gif" },
-            { startHour: 22, image: "images/09020.gif" },
-            { startHour: 23, image: "images/09015.gif" }
-        ];
-
-        const schedule8 = [
-
-            { startHour: 0, image: "images/005-06-06-002.gif" },
-            { startHour: 1, image: "images/005-006-06-009.gif" },
-            { startHour: 2, image: "images/005-006-06-009.gif" },
-            { startHour: 3, image: "images/005-004-08-002.gif" },
-            { startHour: 4, image: "images/005-002-50-002.gif" },
-            { startHour: 5, image: "images/005-003-07-001.gif" },
-            { startHour: 6, image: "images/005-001-50-001.gif" },
-            { startHour: 7, image: "images/00504-41-005.gif" },
-            { startHour: 8, image: "images/005-004-54-002.gif" },
-            { startHour: 9, image: "images/005-006-05-002.gif" },
-            { startHour: 10, image: "images/005-003-07-001.gif" },
-            { startHour: 11, image: "images/005-006-06-009.gif" },
-            { startHour: 12, image: "images/005-011-10-001.gif" },
-            { startHour: 13, image: "images/005-004-22-002.gif" },
-            { startHour: 14, image: "images/005-002-15-002.gif" },
-            { startHour: 15, image: "images/005-014-01-001.gif" },
-            { startHour: 16, image: "images/005-006-05-002.gif" },
-            { startHour: 17, image: "images/005-006-05-002.gif" },
-            { startHour: 18, image: "images/005-002-41-004.gif" },
-            { startHour: 19, image: "images/005-004-08-002.gif" },
-            { startHour: 20, image: "images/005-004-08-002.gif" },
-            { startHour: 21, image: "images/005-004-54-002.gif" },
-            { startHour: 22, image: "images/005-002-50-002.gif" },
-            { startHour: 23, image: "images/005-003-07-001.gif" },
-            { startHour: 24, image: "images/005-011-10-001.gif" }
-
-
-
-        ];
-
-
-        function getImageForSchedule(schedule) {
-            const now = new Date();
-            const hour = now.getHours();
-            for (let i = schedule.length - 1; i >= 0; i--) {
-                if (hour >= schedule[i].startHour) return schedule[i].image;
+            function updateTopSlideshow() {
+                const topImage = document.getElementById("slideshow-top");
+                if (topImage) topImage.src = getTopImageForTime();
             }
-            return schedule[schedule.length - 1].image;
-        }
-        const slideshowIds = [
-            ["slideshow-info", scheduleInfo],
-            ["slideshow-1", schedule1],
-            ["slideshow-2", schedule2],
-            ["slideshow-3", schedule3],
-            ["slideshow-4", schedule4],
-            ["slideshow-5", schedule5],
-            ["slideshow-6", schedule6],
-            ["slideshow-7", schedule7],
-            ["slideshow-8", schedule8],
-        ];
 
-        function updateAllSlideshows() {
-            slideshowIds.forEach(([id, schedule]) => {
-                const element = document.getElementById(id);
-                if (element) element.src = getImageForSchedule(schedule);
-            });
-        }
+            updateTopSlideshow();
+            setInterval(updateTopSlideshow, 10 * 60 * 1000);
 
+            const scheduleInfo = [
+                { startHour: 0, image: "../images/mid-2.gif" },
+                { startHour: 1, image: "../images/mid-3.gif" },
+                { startHour: 2, image: "../images/mid-1.gif" },
+                { startHour: 3, image: "../images/mid-2.gif" },
+                { startHour: 4, image: "../images/mid-3.gif" },
+                { startHour: 5, image: "../images/mor-5.gif" },
+                { startHour: 6, image: "../images/mor-6.gif" },
+                { startHour: 7, image: "../images/mor-7.gif" },
+                { startHour: 8, image: "../images/mor-8.gif" },
+                { startHour: 9, image: "../images/mor-9.gif" },
+                { startHour: 10, image: "../images/mor-10.gif" },
+                { startHour: 12, image: "../images/kon-5.gif" },
+                { startHour: 13, image: "../images/kon-5.gif" },
+                { startHour: 14, image: "../images/kon-6.gif" },
+                { startHour: 15, image: "../images/aft-1.gif" },
+                { startHour: 16, image: "../images/aft-2.gif" },
+                { startHour: 17, image: "../images/aft-3.gif" },
+                { startHour: 18, image: "../images/aft-4.gif" },
+                { startHour: 19, image: "../images/oya-2.gif" },
+                { startHour: 20, image: "../images/oya-3.gif" },
+                { startHour: 21, image: "../images/oya-4.gif" },
+                { startHour: 22, image: "../images/oya-5.gif" },
+                { startHour: 23, image: "../images/mid-1.gif" },
+            ];
 
-        // 初期表示
-        updateAllSlideshows();
+            const schedule1 = [
+                { startHour: 0, image: "../images/kans1.jpg" },
+                { startHour: 1, image: "../images/kans2.jpg" },
+                { startHour: 2, image: "../images/kans3.jpg" },
+                { startHour: 3, image: "../images/kans4.jpg" },
+                { startHour: 4, image: "../images/kans5.jpg" },
+                { startHour: 5, image: "../images/kans6.jpg" },
+                { startHour: 6, image: "../images/kans7.jpg" },
+                { startHour: 7, image: "../images/kans8.jpg" },
+                { startHour: 8, image: "../images/kans10.jpg" },
+                { startHour: 9, image: "../images/kans11.jpg" },
+                { startHour: 10, image: "../images/kans12.jpg" },
+                { startHour: 11, image: "../images/kans1.jpg" },
+                { startHour: 12, image: "../images/kans2.jpg" },
+                { startHour: 13, image: "../images/kans3.jpg" },
+                { startHour: 14, image: "../images/kans4.jpg" },
+                { startHour: 15, image: "../images/kans5.jpg" },
+                { startHour: 16, image: "../images/kans6.jpg" },
+                { startHour: 17, image: "../images/kans7.jpg" },
+                { startHour: 18, image: "../images/kans8.jpg" },
+                { startHour: 19, image: "../images/kans9.jpg" },
+                { startHour: 20, image: "../images/kans10.jpg" },
+                { startHour: 21, image: "../images/kans11.jpg" },
+                { startHour: 22, image: "../images/kans12.jpg" },
+                { startHour: 23, image: "../images/kans13.jpg" },
+            ];
 
-        // 必要に応じて、定期更新も可能
-        setInterval(updateAllSlideshows, 10 * 60 * 1000); // 10分ごとに更新
-    </script>
+            const schedule2 = [
+                { startHour: 0, image: "../images/kans14.jpg" },
+                { startHour: 1, image: "../images/kans15.jpg" },
+                { startHour: 2, image: "../images/kans16.jpg" },
+                { startHour: 3, image: "../images/kans17.jpg" },
+                { startHour: 4, image: "../images/kans18.jpg" },
+                { startHour: 5, image: "../images/kans19.jpg" },
+                { startHour: 6, image: "../images/kans20.jpg" },
+                { startHour: 7, image: "../images/kans21.jpg" },
+                { startHour: 8, image: "../images/kans22.jpg" },
+                { startHour: 9, image: "../images/kans23.jpg" },
+                { startHour: 10, image: "../images/kans14.jpg" },
+                { startHour: 11, image: "../images/kans15.jpg" },
+                { startHour: 12, image: "../images/kans16.jpg" },
+                { startHour: 13, image: "../images/kans17.jpg" },
+                { startHour: 14, image: "../images/kans18.jpg" },
+                { startHour: 15, image: "../images/kans19.jpg" },
+                { startHour: 16, image: "../images/kans20.jpg" },
+                { startHour: 17, image: "../images/kans21.jpg" },
+                { startHour: 18, image: "../images/kans22.jpg" },
+                { startHour: 19, image: "../images/kans23.jpg" },
+                { startHour: 20, image: "../images/kans14.jpg" },
+                { startHour: 21, image: "../images/kans15.jpg" },
+                { startHour: 22, image: "../images/kans16.jpg" },
+                { startHour: 23, image: "../images/kans17.jpg" },
+            ];
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
+            const schedule3 = [
+                { startHour: 0, image: "../images/wan7.gif" },
+                { startHour: 1, image: "../images/wan8.gif" },
+                { startHour: 2, image: "../images/wan9.gif" },
+                { startHour: 3, image: "../images/wan1.gif" },
+                { startHour: 4, image: "../images/wan1.gif" },
+                { startHour: 5, image: "../images/wan2.gif" },
+                { startHour: 6, image: "../images/wan3.gif" },
+                { startHour: 7, image: "../images/wan4.gif" },
+                { startHour: 8, image: "../images/wan5.gif" },
+                { startHour: 9, image: "../images/wan6.gif" },
+                { startHour: 10, image: "../images/wan7.gif" },
+                { startHour: 11, image: "../images/wan8.gif" },
+                { startHour: 12, image: "../images/hi1.gif" },
+                { startHour: 13, image: "../images/wan10.gif" },
+                { startHour: 14, image: "../images/wan11.gif" },
+                { startHour: 15, image: "../images/wan12.gif" },
+                { startHour: 16, image: "../images/wan13.gif" },
+                { startHour: 17, image: "../images/wan14.gif" },
+                { startHour: 18, image: "../images/wan5.gif" },
+                { startHour: 19, image: "../images/wan6.gif" },
+                { startHour: 20, image: "../images/wan7.gif" },
+                { startHour: 21, image: "../images/wan8.gif" },
+                { startHour: 22, image: "../images/wan9.gif" },
+                { startHour: 23, image: "../images/wan10.gif" },
+            ];
+
+            const schedule4 = [
+                { startHour: 0, image: "../images/kg4.gif" },
+                { startHour: 1, image: "../images/kg3.gif" },
+                { startHour: 2, image: "../images/kg2.gif" },
+                { startHour: 3, image: "../images/kg1.gif" },
+                { startHour: 4, image: "../images/kg10.gif" },
+                { startHour: 5, image: "../images/kg19.gif" },
+                { startHour: 6, image: "../images/kg18.gif" },
+                { startHour: 7, image: "../images/kg17.gif" },
+                { startHour: 8, image: "../images/kg16.gif" },
+                { startHour: 9, image: "../images/kg15.gif" },
+                { startHour: 10, image: "../images/kg14.gif" },
+                { startHour: 11, image: "../images/kg14.gif" },
+                { startHour: 12, image: "../images/kg13.gif" },
+                { startHour: 13, image: "../images/kg12.gif" },
+                { startHour: 14, image: "../images/kg11.gif" },
+                { startHour: 15, image: "../images/kg10.gif" },
+                { startHour: 16, image: "../images/kg9.gif" },
+                { startHour: 17, image: "../images/kg8.gif" },
+                { startHour: 18, image: "../images/kg7.gif" },
+                { startHour: 19, image: "../images/kg6.gif" },
+                { startHour: 20, image: "../images/kg5.gif" },
+                { startHour: 21, image: "../images/kg4.gif" },
+                { startHour: 22, image: "../images/kg3.gif" },
+                { startHour: 23, image: "../images/kg2.gif" },
+                { startHour: 24, image: "../images/kg1.gif" },
+            ];
+
+            const schedule5 = [
+                { startHour: 0, image: "../images/125-1k.jpg" },
+                { startHour: 1, image: "../images/125-2k.jpg" },
+                { startHour: 2, image: "../images/125-3k.jpg" },
+                { startHour: 3, image: "../images/125-4k.jpg" },
+                { startHour: 4, image: "../images/125-1k.jpg" },
+                { startHour: 5, image: "../images/125-2k.jpg" },
+                { startHour: 6, image: "../images/125-3k.jpg" },
+                { startHour: 7, image: "../images/125-4k.jpg" },
+                { startHour: 8, image: "../images/125-1k.jpg" },
+                { startHour: 9, image: "../images/125-2k.jpg" },
+                { startHour: 10, image: "../images/125-3k.jpg" },
+                { startHour: 11, image: "../images/125-4k.jpg" },
+                { startHour: 12, image: "../images/125-1k.jpg" },
+                { startHour: 13, image: "../images/125-2k.jpg" },
+                { startHour: 14, image: "../images/125-3k.jpg" },
+                { startHour: 15, image: "../images/125-4k.jpg" },
+                { startHour: 16, image: "../images/125-1k.jpg" },
+                { startHour: 17, image: "../images/125-2k.jpg" },
+                { startHour: 18, image: "../images/125-3k.jpg" },
+                { startHour: 19, image: "../images/125-4k.jpg" },
+                { startHour: 20, image: "../images/125-1k.jpg" },
+                { startHour: 21, image: "../images/125-2k.jpg" },
+                { startHour: 22, image: "../images/125-3k.jpg" },
+                { startHour: 23, image: "../images/125-4k.jpg" },
+            ];
+
+            const schedule6 = [
+                { startHour: 0, image: "images/004001.gif" },
+                { startHour: 1, image: "images/004002.gif" },
+                { startHour: 2, image: "images/004003.gif" },
+                { startHour: 3, image: "images/004004.gif" },
+                { startHour: 4, image: "images/004005.gif" },
+                { startHour: 5, image: "images/004006.gif" },
+                { startHour: 6, image: "images/004007.gif" },
+                { startHour: 7, image: "images/004008.gif" },
+                { startHour: 8, image: "images/004009.gif" },
+                { startHour: 9, image: "images/004010.gif" },
+                { startHour: 10, image: "images/004011.gif" },
+                { startHour: 11, image: "images/004012.gif" },
+                { startHour: 12, image: "images/004013.gif" },
+                { startHour: 13, image: "images/004014.gif" },
+                { startHour: 14, image: "images/004015.gif" },
+                { startHour: 15, image: "images/004016.gif" },
+                { startHour: 16, image: "images/004017.gif" },
+                { startHour: 17, image: "images/004018.gif" },
+                { startHour: 18, image: "images/004019.gif" },
+                { startHour: 19, image: "images/004020.gif" },
+                { startHour: 20, image: "images/004021.gif" },
+                { startHour: 21, image: "images/004022.gif" },
+                { startHour: 22, image: "images/004001.gif" },
+                { startHour: 23, image: "images/004002.gif" },
+            ];
+
+            const schedule7 = [
+                { startHour: 0, image: "images/009001.gif" },
+                { startHour: 1, image: "images/009002.gif" },
+                { startHour: 2, image: "images/009003.gif" },
+                { startHour: 3, image: "images/009004.gif" },
+                { startHour: 4, image: "images/009005.gif" },
+                { startHour: 5, image: "images/009006.gif" },
+                { startHour: 6, image: "images/009007.gif" },
+                { startHour: 7, image: "images/009010.gif" },
+                { startHour: 8, image: "images/09011.gif" },
+                { startHour: 9, image: "images/09012.gif" },
+                { startHour: 10, image: "images/09013.gif" },
+                { startHour: 11, image: "images/09014.gif" },
+                { startHour: 12, image: "images/09015.gif" },
+                { startHour: 13, image: "images/09016.gif" },
+                { startHour: 14, image: "images/09017.gif" },
+                { startHour: 15, image: "images/09018.gif" },
+                { startHour: 16, image: "images/09019.gif" },
+                { startHour: 17, image: "images/09020.gif" },
+                { startHour: 18, image: "images/09021.gif" },
+                { startHour: 19, image: "images/09022.gif" },
+                { startHour: 20, image: "images/09023.gif" },
+                { startHour: 21, image: "images/09024.gif" },
+                { startHour: 22, image: "images/09020.gif" },
+                { startHour: 23, image: "images/09015.gif" },
+            ];
+
+            const schedule8 = [
+                { startHour: 0, image: "images/005-06-06-002.gif" },
+                { startHour: 1, image: "images/005-006-06-009.gif" },
+                { startHour: 2, image: "images/005-006-06-009.gif" },
+                { startHour: 3, image: "images/005-004-08-002.gif" },
+                { startHour: 4, image: "images/005-002-50-002.gif" },
+                { startHour: 5, image: "images/005-003-07-001.gif" },
+                { startHour: 6, image: "images/005-001-50-001.gif" },
+                { startHour: 7, image: "images/00504-41-005.gif" },
+                { startHour: 8, image: "images/005-004-54-002.gif" },
+                { startHour: 9, image: "images/005-006-05-002.gif" },
+                { startHour: 10, image: "images/005-003-07-001.gif" },
+                { startHour: 11, image: "images/005-006-06-009.gif" },
+                { startHour: 12, image: "images/005-011-10-001.gif" },
+                { startHour: 13, image: "images/005-004-22-002.gif" },
+                { startHour: 14, image: "images/005-002-15-002.gif" },
+                { startHour: 15, image: "images/005-014-01-001.gif" },
+                { startHour: 16, image: "images/005-006-05-002.gif" },
+                { startHour: 17, image: "images/005-006-05-002.gif" },
+                { startHour: 18, image: "images/005-002-41-004.gif" },
+                { startHour: 19, image: "images/005-004-08-002.gif" },
+                { startHour: 20, image: "images/005-004-08-002.gif" },
+                { startHour: 21, image: "images/005-004-54-002.gif" },
+                { startHour: 22, image: "images/005-002-50-002.gif" },
+                { startHour: 23, image: "images/005-003-07-001.gif" },
+                { startHour: 24, image: "images/005-011-10-001.gif" },
+            ];
+
+            function getImageForSchedule(schedule) {
+                const now = new Date();
+                const hour = now.getHours();
+                for (let i = schedule.length - 1; i >= 0; i--) {
+                    if (hour >= schedule[i].startHour) return schedule[i].image;
+                }
+                return schedule[schedule.length - 1].image;
+            }
+            const slideshowIds = [
+                ["slideshow-info", scheduleInfo],
+                ["slideshow-1", schedule1],
+                ["slideshow-2", schedule2],
+                ["slideshow-3", schedule3],
+                ["slideshow-4", schedule4],
+                ["slideshow-5", schedule5],
+                ["slideshow-6", schedule6],
+                ["slideshow-7", schedule7],
+                ["slideshow-8", schedule8],
+            ];
+
+            function updateAllSlideshows() {
+                slideshowIds.forEach(([id, schedule]) => {
+                    const element = document.getElementById(id);
+                    if (element) element.src = getImageForSchedule(schedule);
                 });
+            }
+
+            // 初期表示
+            updateAllSlideshows();
+
+            // 必要に応じて、定期更新も可能
+            setInterval(updateAllSlideshows, 10 * 60 * 1000); // 10分ごとに更新
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                        }
+                    });
+                });
+
+                document
+                    .querySelectorAll(".fade-up")
+                    .forEach((el) => observer.observe(el));
             });
-
-            document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
-        });
-    </script>
-
-
-</body>
-
+        </script>
+    </body>
 </html>
