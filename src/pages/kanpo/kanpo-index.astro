@@ -1,8 +1,7 @@
 ---
-import Header from "../../components/header.astro"
-import Footer from "../../components/footer.astro"
-import "../styles/style.css";
-import "style-main.css";
+import Header from "../../components/header.astro";
+import Footer from "../../components/footer.astro";
+import "../../styles/style.css";
 ---
 
 <!DOCTYPE html>
@@ -28,7 +27,7 @@ import "style-main.css";
         </section>
 
         <section class="narration">
-            <img src="images/sumairut.jpg" alt="雲の上の女性" style="
+            <img src="/images/sumairut.jpg" alt="雲の上の女性" style="
         width: 90%;
         max-width: 600px;
         height: auto;
@@ -39,24 +38,24 @@ import "style-main.css";
     ">
 
             <audio controls style="width: 90%; max-width: 600px; display: block; margin: 0 auto;">
-                <source src="images/sumairua.mp3" type="audio/mp3">
+                <source src="../images/sumairua.mp3" type="audio/mp3">
                 お使いのブラウザは audio タグに対応していません。
             </audio>
         </section>
 
         <section class="promo">
             <div class="sns-buttons">
-                <a href="https://lin.ee/56a0xBp"><img src="images/10000.jpg" alt="LINE予約1" class="fixed-size"></a>
-                <a href="https://lin.ee/56a0xBp"><img src="images/10001.jpg" alt="LINE予約2" class="fixed-size"></a>
-                <a href="tel:098-936-6270"><img src="images/10002.jpg" alt="電話" class="fixed-size"></a>
+                <a href="https://lin.ee/56a0xBp"><img src="../images/10000.jpg" alt="LINE予約1" class="fixed-size"></a>
+                <a href="https://lin.ee/56a0xBp"><img src="../images/10001.jpg" alt="LINE予約2" class="fixed-size"></a>
+                <a href="tel:098-936-6270"><img src="../images/10002.jpg" alt="電話" class="fixed-size"></a>
             </div>
         </section>
 
         <section class="promo">
             <div class="sns-buttons">
-                <a href="/kanpoNo/kanpoNo"><img src="images/bangoukensaku.jpg" class="fixed-size"></a>
-                <a href="/syoujyou/syoujyou"><img src="images/syoujyoukensaku.jpg" class="fixed-size"></a>
-                <a href=""><img src="images/kanijiten.jpg" class="fixed-size"></a>
+                <a href="/kanpoNo/kanpoNo"><img src="../images/bangoukensaku.jpg" class="fixed-size"></a>
+                <a href="/syoujyou/syoujyou"><img src="../images/syoujyoukensaku.jpg" class="fixed-size"></a>
+                <a href=""><img src="../images/kanijiten.jpg" class="fixed-size"></a>
 
             </div>
         </section>
@@ -94,10 +93,10 @@ import "style-main.css";
     <script>
 
         const scheduleTop = [
-            { startHour: 3, image: "images/heizitu5.gif" },
-            { startHour: 14, image: "images/heizitu5.gif" },
-            { startHour: 15, image: "images/heizitu5.gif" },
-            { startHour: 18, image: "images/heizitu5.gif" }
+            { startHour: 3, image: "../images/heizitu5.gif" },
+            { startHour: 14, image: "../images/heizitu5.gif" },
+            { startHour: 15, image: "../images/heizitu5.gif" },
+            { startHour: 18, image: "../images/heizitu5.gif" }
         ];
 
         function getTopImageForTime() {
