@@ -1,7 +1,9 @@
 ---
 import Header from "../../components/header.astro";
 import Footer from "../../components/footer.astro";
+import Narration from "../../components/Narration.astro";
 import "../../styles/style.css";
+import NetIndex from "../net/net-index.astro";
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,24 +52,7 @@ import "../../styles/style.css";
       <h2><br>予約のない方の待ち時間は長くなっています。</h2>
     </section>
 
-            <section class="narration">
-            <img src="images/wakagaerit.jpg" alt="雲の上の女性" style="
-        width: 90%;
-        max-width: 600px;
-        height: auto;
-        display: block;
-        margin: 0 auto 20px auto;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    ">
-
-
-
-            <audio controls style="width: 90%; max-width: 600px; display: block; margin: 0 auto;">
-                <source src="images/wakagaeria.mp3" type="audio/mp3">
-                お使いのブラウザは audio タグに対応していません。
-            </audio>
-        </section>
+<Narration  />
 
     <section class="promo">
       <div class="sns-buttons">
@@ -85,16 +70,16 @@ import "../../styles/style.css";
 
     <section class="promo">
       <div class="sns-buttons">
-        <a href="vi/vi1.html"><img src="images/pi1.jpg" class="fixed-size"></a>
-        <a href="vi/vi2.html"><img src="images/pi2.jpg" class="fixed-size"></a>
-        <a href="vi/v3.html"><img src="images/pi3.jpg" class="fixed-size"></a>
-        <a href="vi/v4.html"><img src="images/pi4.jpg" class="fixed-size"></a>
-        <a href="vi/v5.html"><img src="images/pi5.jpg" class="fixed-size"></a>
-        <a href="vi/v5.html"><img src="images/pi5.jpg" class="fixed-size"></a>
-        <a href="vi/v5.html"><img src="images/pi5.jpg" class="fixed-size"></a>
-        <a href="vi/v5.html"><img src="images/pi5.jpg" class="fixed-size"></a>
-        <a href="vi/v5.html"><img src="images/pi5.jpg" class="fixed-size"></a>
-        <a href="vi/v5.html"><img src="images/pi5.jpg" class="fixed-size"></a>
+        <a href="vi/vi1"><img src="../images/pi1.jpg" class="fixed-size"></a>
+        <a href="vi/vi2"><img src="../images/pi2.jpg" class="fixed-size"></a>
+        <a href="vi/v3"><img src="../images/pi3.jpg" class="fixed-size"></a>
+        <a href="vi/v4"><img src="../images/pi4.jpg" class="fixed-size"></a>
+        <a href="vi/v5"><img src="../images/pi5.jpg" class="fixed-size"></a>
+        <a href="vi/v5"><img src="../images/pi5.jpg" class="fixed-size"></a>
+        <a href="vi/v5"><img src="../images/pi5.jpg" class="fixed-size"></a>
+        <a href="vi/v5"><img src="../images/pi5.jpg" class="fixed-size"></a>
+        <a href="vi/v5"><img src="../images/pi5.jpg" class="fixed-size"></a>
+        <a href="vi/v5"><img src="../images/pi5.jpg" class="fixed-size"></a>
 
       </div>
     </section>
@@ -112,8 +97,8 @@ import "../../styles/style.css";
     </section>
 
     <section class="calendar">
-      <img src="images/7gatu1.jpg" class="responsive-img" alt="6月">
-      <img src="images/8gatu1.jpg" class="responsive-img" alt="7月">
+      <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月">
+      <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月">
     </section>
   </main>
 
@@ -124,10 +109,10 @@ import "../../styles/style.css";
   <script>
 
     const scheduleTop = [
-      { startHour: 3, image: "images/heizitu10.gif" },
-      { startHour: 14, image: "images/heizitu10.gif" },
-      { startHour: 15, image: "images/heizitu10.gif" },
-      { startHour: 18, image: "images/heizitu10.gif" }
+      { startHour: 3, image: "../images/heizitu5.gif" },
+      { startHour: 14, image: "../mages/heizitu5.gif" },
+      { startHour: 15, image: "../images/heizitu5.gif" },
+      { startHour: 18, image: "../images/heizitu5.gif" }
     ];
 
     function getTopImageForTime() {
