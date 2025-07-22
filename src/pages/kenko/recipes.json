@@ -1,0 +1,18 @@
+[
+  {
+    "id": "tomato",
+    "title": "トマトのレシピGIF集",
+    "recipes": [
+      {
+        "image": "images/tomato1.gif",
+        "title": "トマトと卵の炒め物",
+        "description": "ふわふわ卵とトマトの王道レシピ！"
+      },
+      {
+        "image": "images/tomato2.gif",
+        "title": "冷やしトマト",
+        "description": "切って塩をふるだけ！シンプル最強"
+      }
+    ]
+  }
+]

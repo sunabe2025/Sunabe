@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>レシピGIFギャラリー</title>
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+  <header>
+    <h1>レシピGIFギャラリー</h1>
+    <p>食材別にGIFレシピを表示します</p>
+  </header>
+
+  <main class="gallery">
+    <!-- JavaScriptで動的にレシピを表示 -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 砂辺クリニック</p>
+  </footer>
+
+  <script>
+    // idを取得（例: ?id=tomato）
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    // JSONファイルを読み込み
+    fetch('recipes.json')
+      .then(response => response.json())
+      .then(data => {
+        const entry = data.find(item => item.id === id);
+        if (!entry) {
+          document.querySelector('.gallery').innerHTML = '<p>該当するレシピがありません。</p>';
+          return;
+        }
+
+        document.querySelector('h1').textContent = entry.title;
+        const gallery = document.querySelector('.gallery');
+        gallery.innerHTML = '';
+
+        entry.recipes.forEach(recipe => {
+          const card = document.createElement('div');
+          card.className = 'recipe-card';
+          card.innerHTML = `
+            <img src="${recipe.image}" alt="${recipe.title}">
+            <h2>${recipe.title}</h2>
+            <p>${recipe.description}</p>
+          `;
+          gallery.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('JSON読み込みエラー:', error);
+        document.querySelector('.gallery').innerHTML = '<p>レシピデータの取得に失敗しました。</p>';
+      });
+  </script>
+</body>
+</html>
