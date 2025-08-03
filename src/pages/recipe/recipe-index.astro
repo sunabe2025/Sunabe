@@ -1,86 +1,90 @@
 ---
 import Header from "../../components/header.astro";
 import Footer from "../../components/footer.astro";
+import Narration from "../../components/Narration.astro";
 import "../../styles/style.css";
 ---
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>砂辺クリニック 読者レシピ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>読者レシピ</title>
   <link rel="stylesheet" href="style-main.css">
   <script src="https://js.ptengine.jp/554zwt96.js"></script>
-  <style>
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1em;
-      padding: 2em 1em;
-    }
-
-    .category-grid a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      background-color: #ffffff;
-      padding: 1em;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
-
-    .category-grid a:hover {
-      transform: scale(1.05);
-    }
-
-    .category-grid img {
-      width: 100%;
-      max-width: 120px;
-      height: auto;
-      margin-bottom: 0.5em;
-      border-radius: 6px;
-    }
-  </style>
+  <meta name="description" content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。">
 </head>
 
 <body>
-
 <Header  />
 
   <main>
     <section>
-      <h1 style="text-align:center; color:#0a3d62;">読者レシピ</h1>
-      <p style="text-align:center;">おすすめレシピをカテゴリから探せます</p>
+      <h1>読者レシピ</h1>
+      <img id="slideshow-top" class="responsive-img" alt="トップ画像" />
+      <h2>予約のない方の待ち時間は長くなっています。</h2>
     </section>
 
-    <section>
-      <h2>カテゴリ一覧</h2>
-      <nav class="category-grid">
-        <a href="vegetablesb.html"><img src="images/ryo1.jpg" alt="野菜">野菜</a>
-        <a href="kudamonob.html"><img src="images/ryo2.jpg" alt="果物">果物</a>
-        <a href="sakanab.html"><img src="images/ryo3.jpg" alt="魚介">魚介</a>
-        <a href="meatb.html"><img src="images/ryo4.jpg" alt="肉">肉</a>
-        <a href="grainb.html"><img src="images/ryo5.jpg" alt="穀物">主食</a>
-        <a href="beansb.html"><img src="images/ryo6.jpg" alt="豆">豆</a>
-        <a href="dairyb.html"><img src="images/ryo7.jpg" alt="卵乳製品">卵・乳製品</a>
-        <a href="#"><img src="images/ryo8.jpg" alt="調味料">調味料</a>
-        <a href="#"><img src="images/ryo9.jpg" alt="飲み物">飲み物</a>
-        <a href="#"><img src="images/ryo10.jpg" alt="ドレッシング">ドレッシング</a>
-        <a href="#"><img src="images/ryo11.jpg" alt="デザート">デザート</a>
-        <a href="kakoub.html"><img src="images/ryo12.jpg" alt="加工食品">加工食品</a>
-        <a href="saradab.html"><img src="images/ryo13.jpg" alt="サラダ">サラダ</a>
-        <a href="pasutab.html"><img src="images/ryo14.jpg" alt="パスタ">パスタ</a>
-        <a href="su-pub.html"><img src="images/ryo15.jpg" alt="スープ">スープ</a>
-      </nav>
+<Narration  />
+
+    <section class="promo">
+      <div class="sns-buttons">
+        <a href="https://lin.ee/56a0xBp"><img src="../images/10000.jpg" alt="LINE予約1" class="fixed-size"></a>
+        <a href="https://lin.ee/56a0xBp"><img src="../images/10001.jpg" alt="LINE予約2" class="fixed-size"></a>
+        <a href="tel:098-936-6270"><img src="../images/10002.jpg" alt="電話" class="fixed-size"></a>
+      </div>
+    </section>
+
+    <section class="promo">
+      <div class="sns-buttons">
+        <a href=""><img src="../images/"  class="fixed-size"></a>
+        <a href=""><img src="../images/"  class="fixed-size"></a>
+        <a href=""><img src="../images/"  class="fixed-size"></a>
+        <a href=""><img src="../images/"  class="fixed-size"></a>
+        <a href=""><img src="../images/"  class="fixed-size"></a>
+      </div>
+    </section>
+
+    <section class="calendar">
+      <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月">
+      <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月">
     </section>
   </main>
 
   <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button">LINEで予約する</a>
 
 <Footer  />
+
+  <script>
+
+    const scheduleTop = [
+      { startHour: 3, image: "../images/heizitu5.gif" },
+      { startHour: 14, image: "../images/heizitu5.gif" },
+      { startHour: 15, image: "../images/heizitu5.gif" },
+      { startHour: 18, image: "../images/heizitu5.gif" }
+    ];
+
+    function getTopImageForTime() {
+      const now = new Date();
+      const hour = now.getHours();
+      for (let i = scheduleTop.length - 1; i >= 0; i--) {
+        if (hour >= scheduleTop[i].startHour) return scheduleTop[i].image;
+      }
+      return scheduleTop[0].image;
+    }
+
+    function updateTopSlideshow() {
+      const topImage = document.getElementById("slideshow-top");
+      // @ts-ignore
+      if (topImage) topImage.src = getTopImageForTime();
+    }
+
+    updateTopSlideshow();
+    setInterval(updateTopSlideshow, 10 * 60 * 1000);
+
+  </script>
+
 
 </body>
 
