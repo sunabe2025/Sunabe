@@ -1,4 +1,5 @@
 ---
+// Astroのスタイルインポート
 import "../../styles/kenko-style.css";
 ---
 
@@ -13,57 +14,47 @@ import "../../styles/kenko-style.css";
     <header>
         <h1>健康</h1>
     </header>
-    
-        <main>
-            <h2>メニュー</h2>
-            <div class="card-container">
-                <a class="card" href="calorie">
-                    <h3>カロリー計算ツール</h3>
-                    <p>食材のカロリーを簡単に計算</p>
-                </a>
-                <a class="card" href="enbun.html">
-                    <h3>塩分早見表</h3>
-                </a>
-                <a class="card" href="vitamin_a.html">
-                    <h3>ビタミンACE早見表(製作中)</h3>
-                    <p>ビタミンACE</p>
-                </a>
-                <a class="card" href="tobun.html">
-                    <h3>糖質早見表</h3>
-                    
-                </a>
-                <a class="card" href="recommend.html">
-                    <h3>高血圧食事(製作中)</h3>
-                    <p>高血圧食事～</p>
-                </a>
-                <a class="card" href="recommend.html">
-                    <h3>高脂血症(製作中)</h3>
-                    <p>高脂血症～</p>
-                </a>
-                <a class="card" href="recommend.html">
-                    <h3>痛風(製作中)</h3>
-                    <p>痛風～</p>
-                </a>
-                <a class="card" href="recommend.html">
-                    <h3>ダイエット(製作中)</h3>
-                    <p>ダイエット～</p>
-                </a>
-                <a class="card" href="category.html">
-                    <h3>カテゴリ(製作中)</h3>
-            
-                </a>
 
-            </div>
-        </main>
-        
-    
+    <main>
+        <!-- 追加したバナーリンク -->
+        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; margin-bottom: 40px;">
+            <a href="#" style="display: block;">
+                <img src="/images/kudamonoeiyou.jpg" alt="果物の栄養" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            </a>
+            <a href="#" style="display: block;">
+                <img src="/images/sakanaeiyou.jpg" alt="魚の栄養" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            </a>
+            <a href="#" style="display: block;">
+                <img src="/images/yasaieiyou.jpg" alt="野菜の栄養" style="width: 100%; max-width: 800px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            </a>
+        </div>
 
-    
+        <!-- 既存メニュー -->
+        <h2>メニュー</h2>
+        <div class="card-container">
+            <a class="card" href="calorie">
+                <h3>カロリー計算ツール</h3>
+                <p>食材のカロリーを簡単に計算</p>
+            </a>
+            <a class="card" href="enbun.html">
+                <h3>塩分早見表</h3>
+            </a>
+            <a class="card" href="vitamin_a.html">
+                <h3>ビタミンACE早見表(製作中)</h3>
+                <p>ビタミンACE</p>
+            </a>
+            <a class="card" href="tobun.html">
+                <h3>糖質早見表</h3>
+            </a>
+            <a class="card" href="recommend.html">
+                <h3>高血圧食事(製作中)</h3>
+                <p>高血圧食事～</p>
+            </a>
+        </div>
+    </main>
+
+    <footer style="background-color: #ddd; padding: 10px; text-align: center;">
+        <p>&copy; 2025 砂辺クリニック</p>
+    </footer>
 </body>
-
-<footer style="background-color: #ddd; padding: 10px; text-align: center;">
-    <p>&copy; 2025 砂辺クリニック</p>
-</footer>
-
 </html>
-
