@@ -3,7 +3,9 @@ import Header from "../../components/header.astro";
 import Footer from "../../components/footer.astro";
 import Narration from "../../components/Narration.astro";
 import TodayScheduleImage from "../../components/TodayScheduleImage.astro";
+import CalendarImages from "../../components/CalendarImages.astro";
 import "../../styles/style.css";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -110,10 +112,7 @@ import "../../styles/style.css";
         <img id="slideshow-3" class="responsive-img fade-up" alt="スライド3" />
       </section>
 
-      <section class="calendar">
-        <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月" />
-        <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月" />
-      </section>
+      <ClientRouter />
     </main>
 
     <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button"
