@@ -3,6 +3,7 @@ import Header from "../../components/header.astro";
 import Footer from "../../components/footer.astro";
 import TodayScheduleImage from "../../components/TodayScheduleImage.astro";
 import Narration from "../../components/Narration.astro";
+import CalendarImages from "../../components/CalendarImages.astro";
 import "../../styles/style.css";
 ---
 
@@ -59,7 +60,7 @@ import "../../styles/style.css";
         <h2>予約のない方の待ち時間は長くなっています。</h2>
       </section>
 
-<Narration />
+      <Narration />
 
       <section class="promo">
         <div class="sns-buttons">
@@ -156,10 +157,7 @@ import "../../styles/style.css";
         <img id="slideshow-5" class="responsive-img fade-up" alt="スライド5" />
       </section>
 
-      <section class="calendar">
-        <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月" />
-        <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月" />
-      </section>
+      <CalendarImages />
     </main>
 
     <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button"
