@@ -1,24 +1,23 @@
 ---
 import Header from "../../components/header.astro";
 import Footer from "../../components/footer.astro";
+import TodayScheduleImage from "../../components/TodayScheduleImage.astro";
 import "../../styles/style.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
-<head>
-  <script src="https://js.ptengine.jp/55iy7etj.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>砂辺クリニック皮膚科</title>
-  <link rel="stylesheet" href="style-main.css">
-
   <head>
+    <script src="https://js.ptengine.jp/55iy7etj.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>砂辺クリニック皮膚科</title>
-    <link rel="stylesheet" href="style-main.css">
+    <link rel="stylesheet" href="style-main.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>砂辺クリニック皮膚科</title>
+    <link rel="stylesheet" href="style-main.css" />
     <style>
       .poemu {
         text-align: center;
@@ -44,21 +43,26 @@ import "../../styles/style.css";
   </head>
 
   <script src="https://js.ptengine.jp/554zwt96.js"></script>
-  <meta name="description" content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。">
-</head>
+  <meta
+    name="description"
+    content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。"
+  />
 
-<body>
-<Header  />
+  <body>
+    <Header />
 
-  <main>
-    <section>
-      <h1>砂辺クリニック皮膚科</h1>
-      <img id="slideshow-top" class="responsive-img" alt="トップ画像" />
-      <h2>予約のない方の待ち時間は長くなっています。</h2>
-    </section>
+    <main>
+      <section>
+        <h1>砂辺クリニック皮膚科</h1>
+        <img id="slideshow-top" class="responsive-img" alt="トップ画像" />
+        <h2>予約のない方の待ち時間は長くなっています。</h2>
+      </section>
 
-    <section class="narration">
-      <img src="../images/akaikutuk.jpg" alt="雲の上の女性" style="
+      <section class="narration">
+        <img
+          src="../images/akaikutuk.jpg"
+          alt="雲の上の女性"
+          style="
         width: 90%;
         max-width: 600px;
         height: auto;
@@ -66,411 +70,424 @@ import "../../styles/style.css";
         margin: 0 auto 20px auto;
         border-radius: 15px;
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    ">
+    "
+        />
 
+        <audio
+          controls
+          style="width: 90%; max-width: 600px; display: block; margin: 0 auto;"
+        >
+          <source src="../images/akaikutua.mp3" type="audio/mp3" />
+          お使いのブラウザは audio タグに対応していません。
+        </audio>
+      </section>
 
+      <section class="promo">
+        <div class="sns-buttons">
+          <a href="https://lin.ee/56a0xBp"
+            ><img
+              src="../images/10000.jpg"
+              alt="LINE予約1"
+              class="fixed-size"
+            /></a
+          >
+          <a href="https://lin.ee/56a0xBp"
+            ><img
+              src="../images/10001.jpg"
+              alt="LINE予約2"
+              class="fixed-size"
+            /></a
+          >
+          <a href="tel:098-936-6270"
+            ><img src="../images/10002.jpg" alt="電話" class="fixed-size" /></a
+          >
+        </div>
+      </section>
 
-      <audio controls style="width: 90%; max-width: 600px; display: block; margin: 0 auto;">
-        <source src="../images/akaikutua.mp3" type="audio/mp3">
-        お使いのブラウザは audio タグに対応していません。
-      </audio>
-    </section>
+      <section class="poemu">
+        <h1>院長のひとりごと<br /> スカッとさわやか</h1>
+        <img
+          src="../images/esse-1sukattosawayaka.gif"
+          width="900"
+          height="600"
+        />
+      </section>
 
-    <section class="promo">
-      <div class="sns-buttons">
-        <a href="https://lin.ee/56a0xBp"><img src="../images/10000.jpg" alt="LINE予約1" class="fixed-size"></a>
-        <a href="https://lin.ee/56a0xBp"><img src="../images/10001.jpg" alt="LINE予約2" class="fixed-size"></a>
-        <a href="tel:098-936-6270"><img src="../images/10002.jpg" alt="電話" class="fixed-size"></a>
-      </div>
-    </section>
+      <section class="promo">
+        <div class="sns-buttons">
+          <a href="hi/h1"
+            ><img src="../images/hi1.jpg" alt="hi1" class="fixed-size" /></a
+          >
+          <a href="hi/h2"
+            ><img src="../images/hi2.jpg" alt="hi2" class="fixed-size" /></a
+          >
+          <a href="hi/h3"
+            ><img src="../images/hi3.jpg" alt="hi3" class="fixed-size" /></a
+          >
+          <a href="hi/h4"
+            ><img src="../images/hi4.jpg" alt="hi4" class="fixed-size" /></a
+          >
+          <a href="hi/h5"
+            ><img src="../images/hi5.jpg" alt="hi5" class="fixed-size" /></a
+          >
+          <a href="hi/h6"
+            ><img src="../images/hi6.jpg" alt="hi6" class="fixed-size" /></a
+          >
+          <a href="hi/h7"
+            ><img src="../images/hi7.jpg" alt="hi7" class="fixed-size" /></a
+          >
+          <a href="hi/h8"
+            ><img src="../images/hi8.jpg" alt="hi8" class="fixed-size" /></a
+          >
+          <a href="hi/h9"
+            ><img src="../images/hi9.jpg" alt="hi9" class="fixed-size" /></a
+          >
+          <a href="hi/h10"
+            ><img src="../images/hi10.jpg" alt="hi10" class="fixed-size" /></a
+          >
+          <a href="hi/hi11"
+            ><img src="../images/hi11.jpg" alt="hi11" class="fixed-size" /></a
+          >
+          <a href="hi/hi12"
+            ><img src="../images/hi12.jpg" alt="hi12" class="fixed-size" /></a
+          >
+          <a href="hi/hi13"
+            ><img src="../images/hi13.jpg" alt="hi13" class="fixed-size" /></a
+          >
 
-    <section class="poemu">
-      <h1>院長のひとりごと<br> スカッとさわやか</h1>
-      <img src="../images/esse-1sukattosawayaka.gif" width="900" height="600">
-    </section>
+          <a href="hi/hi14"
+            ><img src="../images/hi14.jpg" alt="hi14" class="fixed-size" /></a
+          >
+          <a href="hi/hi15"
+            ><img src="../images/hi15.jpg" alt="hi15" class="fixed-size" /></a
+          >
+        </div>
+      </section>
 
-    <section class="promo">
-      <div class="sns-buttons">
-        <a href="hi/h1"><img src="../images/hi1.jpg" alt="hi1" class="fixed-size"></a>
-        <a href="hi/h2"><img src="../images/hi2.jpg" alt="hi2" class="fixed-size"></a>
-        <a href="hi/h3"><img src="../images/hi3.jpg" alt="hi3" class="fixed-size"></a>
-        <a href="hi/h4"><img src="../images/hi4.jpg" alt="hi4" class="fixed-size"></a>
-        <a href="hi/h5"><img src="../images/hi5.jpg" alt="hi5" class="fixed-size"></a>
-        <a href="hi/h6"><img src="../images/hi6.jpg" alt="hi6" class="fixed-size"></a>
-        <a href="hi/h7"><img src="../images/hi7.jpg" alt="hi7" class="fixed-size"></a>
-        <a href="hi/h8"><img src="../images/hi8.jpg" alt="hi8" class="fixed-size"></a>
-        <a href="hi/h9"><img src="../images/hi9.jpg" alt="hi9" class="fixed-size"></a>
-        <a href="hi/h10"><img src="../images/hi10.jpg" alt="hi10" class="fixed-size"></a>
-        <a href="hi/hi11"><img src="../images/hi11.jpg" alt="hi11" class="fixed-size"></a>
-        <a href="hi/hi12"><img src="../images/hi12.jpg" alt="hi12" class="fixed-size"></a>
-        <a href="hi/hi13"><img src="../images/hi13.jpg" alt="hi13" class="fixed-size"></a>
-        
-        <a href="hi/hi14"><img src="../images/hi14.jpg" alt="hi14" class="fixed-size"></a>
-        <a href="hi/hi15"><img src="../images/hi15.jpg" alt="hi15" class="fixed-size"></a>
-      </div>
-    </section>
+      <section class="slides">
+        <h2>皮膚の進化と構造（毎時間１日２４回更新）</h2>
+        <img id="slideshow-1" class="responsive-img fade-up" alt="スライド1" />
+        <h2>皮膚の老化の原因・誘因（毎時間１日２４回更新）</h2>
+        <img id="slideshow-2" class="responsive-img fade-up" alt="スライド2" />
+        <h2>皮膚の衛生と美容（毎時間１日２４回上映）</h2>
+        <img id="slideshow-3" class="responsive-img fade-up" alt="スライド3" />
+        <h2>皮膚外用剤（毎時間１日２４回上映）</h2>
+        <img id="slideshow-4" class="responsive-img fade-up" alt="スライド4" />
+        <h2>ひーりんぐ・院長制作（毎時間１日２４回上映）</h2>
+        <img id="slideshow-5" class="responsive-img fade-up" alt="スライド5" />
+      </section>
 
-    <section class="slides">
-      <h2>皮膚の進化と構造（毎時間１日２４回更新）</h2>
-      <img id="slideshow-1" class="responsive-img fade-up" alt="スライド1">
-      <h2>皮膚の老化の原因・誘因（毎時間１日２４回更新）</h2>
-      <img id="slideshow-2" class="responsive-img fade-up" alt="スライド2">
-      <h2>皮膚の衛生と美容（毎時間１日２４回上映）</h2>
-      <img id="slideshow-3" class="responsive-img fade-up" alt="スライド3">
-      <h2>皮膚外用剤（毎時間１日２４回上映）</h2>
-      <img id="slideshow-4" class="responsive-img fade-up" alt="スライド4">
-      <h2>ひーりんぐ・院長制作（毎時間１日２４回上映）</h2>
-      <img id="slideshow-5" class="responsive-img fade-up" alt="スライド5">
-    </section>
+      <section class="calendar">
+        <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月" />
+        <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月" />
+      </section>
+    </main>
 
-    <section class="calendar">
-      <img src="../images/7gatu1.jpg" class="responsive-img" alt="6月">
-      <img src="../images/8gatu1.jpg" class="responsive-img" alt="7月">
-    </section>
-  </main>
+    <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button"
+      >LINEで予約する</a
+    >
 
-  <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button">LINEで予約する</a>
+    <Footer />
 
-<Footer  />
+    <TodayScheduleImage />
 
-  <script>
+    <script>
+      const scheduleInfo = [
+        { startHour: 0, image: "../images/mid-2.gif" },
+        { startHour: 1, image: "../images/mid-3.gif" },
+        { startHour: 2, image: "../images/mid-1.gif" },
+        { startHour: 3, image: "../images/mid-2.gif" },
+        { startHour: 4, image: "../images/mid-3.gif" },
+        { startHour: 5, image: "../images/mor-5.gif" },
+        { startHour: 6, image: "../images/mor-6.gif" },
+        { startHour: 7, image: "../images/mor-7.gif" },
+        { startHour: 8, image: "../images/mor-8.gif" },
+        { startHour: 9, image: "../images/mor-9.gif" },
+        { startHour: 10, image: "../images/mor-10.gif" },
+        { startHour: 12, image: "../images/kon-5.gif" },
+        { startHour: 13, image: "../images/kon-5.gif" },
+        { startHour: 14, image: "../images/kon-6.gif" },
+        { startHour: 15, image: "../images/aft-1.gif" },
+        { startHour: 16, image: "../images/aft-2.gif" },
+        { startHour: 17, image: "../images/aft-3.gif" },
+        { startHour: 18, image: "../images/aft-4.gif" },
+        { startHour: 19, image: "../images/oya-2.gif" },
+        { startHour: 20, image: "../images/oya-3.gif" },
+        { startHour: 21, image: "../images/oya-4.gif" },
+        { startHour: 22, image: "../images/oya-5.gif" },
+        { startHour: 23, image: "../images/mid-1.gif" },
+      ];
 
-    const scheduleTop = [
-      { startHour: 3, image: "../images/heizitu5.gif" },
-      { startHour: 14, image: "../images/heizitu5.gif" },
-      { startHour: 15, image: "../images/heizitu5.gif" },
-      { startHour: 18, image: "../images/heizitu5.gif" }
-    ];
+      const schedule1 = [
+        { startHour: 0, image: "../images/hifu1-1.gif" },
+        { startHour: 1, image: "../images/hifu2-1.gif" },
+        { startHour: 2, image: "../images/hifu3-1.gif" },
+        { startHour: 3, image: "../images/hifu1-2.gif" },
+        { startHour: 4, image: "../images/hifu2-2.gif" },
+        { startHour: 5, image: "../images/hifu3-2.gif" },
+        { startHour: 6, image: "../images/hifu1-3.gif" },
+        { startHour: 7, image: "../images/hifu2-3.gif" },
+        { startHour: 8, image: "../images/hifu3-3.gif" },
+        { startHour: 9, image: "../images/hifu1-4.gif" },
+        { startHour: 10, image: "../images/hifu2-4.gif" },
+        { startHour: 11, image: "../images/hifu3-4.gif" },
+        { startHour: 12, image: "../images/hifu1-5.gif" },
+        { startHour: 13, image: "../images/hifu2-5.gif" },
+        { startHour: 14, image: "../images/hifu3-5.gif" },
+        { startHour: 15, image: "../images/hifu1-1.gif" },
+        { startHour: 16, image: "../images/hifu2-1.gif" },
+        { startHour: 17, image: "../images/hifu3-1.gif" },
+        { startHour: 18, image: "../images/hifu1-2.gif" },
+        { startHour: 19, image: "../images/hifu2-2.gif" },
+        { startHour: 20, image: "../images/hifu3-2.gif" },
+        { startHour: 21, image: "../images/hifu1-3.gif" },
+        { startHour: 22, image: "../images/hifu2-3.gif" },
+        { startHour: 23, image: "../images/hifu3-3.gif" },
+      ];
 
-    function getTopImageForTime() {
-      const now = new Date();
-      const hour = now.getHours();
-      for (let i = scheduleTop.length - 1; i >= 0; i--) {
-        if (hour >= scheduleTop[i].startHour) return scheduleTop[i].image;
-      }
-      return scheduleTop[0].image;
-    }
+      const schedule2 = [
+        { startHour: 0, image: "../images/hifu4-1.gif" },
+        { startHour: 1, image: "../images/hifu5-1.gif" },
+        { startHour: 2, image: "../images/hifu6-1.gif" },
+        { startHour: 3, image: "../images/hifu7-1.gif" },
+        { startHour: 4, image: "../images/hifu4-2.gif" },
+        { startHour: 5, image: "../images/hifu5-2.gif" },
+        { startHour: 6, image: "../images/hifu6-2.gif" },
+        { startHour: 7, image: "../images/hifu7-2.gif" },
+        { startHour: 8, image: "../images/hifu4-3.gif" },
+        { startHour: 9, image: "../images/hifu5-3.gif" },
+        { startHour: 10, image: "../images/hifu6-3.gif" },
+        { startHour: 11, image: "../images/hifu7-3.gif" },
+        { startHour: 12, image: "../images/hifu4-4.gif" },
+        { startHour: 13, image: "../images/hifu5-4.gif" },
+        { startHour: 14, image: "../images/hifu6-4.gif" },
+        { startHour: 15, image: "../images/hifu7-4.gif" },
+        { startHour: 16, image: "../images/hifu4-5.gif" },
+        { startHour: 17, image: "../images/hifu5-5.gif" },
+        { startHour: 18, image: "../images/hifu6-5.gif" },
+        { startHour: 19, image: "../images/hifu7-5.gif" },
+        { startHour: 20, image: "../images/hifu4-1.gif" },
+        { startHour: 21, image: "../images/hifu5-1.gif" },
+        { startHour: 22, image: "../images/hifu6-1.gif" },
+        { startHour: 23, image: "../images/hifu7-1.gif" },
+      ];
 
-    function updateTopSlideshow() {
-      const topImage = document.getElementById("slideshow-top");
+      const schedule3 = [
+        { startHour: 0, image: "../images/hifu8-1.gif" },
+        { startHour: 1, image: "../images/hifu9-1.gif" },
+        { startHour: 2, image: "../images/hifu10-1.gif" },
+        { startHour: 3, image: "../images/hifu11-1.gif" },
+        { startHour: 4, image: "../images/hifu8-2.gif" },
+        { startHour: 5, image: "../images/hifu9-2.gif" },
+        { startHour: 6, image: "../images/hifu10-2.gif" },
+        { startHour: 7, image: "../images/hifu11-2.gif" },
+        { startHour: 8, image: "../images/hifu8-3.gif" },
+        { startHour: 9, image: "../images/hifu9-3.gif" },
+        { startHour: 10, image: "../images/hifu10-3.gif" },
+        { startHour: 11, image: "../images/hifu11-3.gif" },
+        { startHour: 12, image: "../images/hifu8-4.gif" },
+        { startHour: 13, image: "../images/hifu9-4.gif" },
+        { startHour: 14, image: "../images/hifu10-4.gif" },
+        { startHour: 15, image: "../images/hifu11-4.gif" },
+        { startHour: 16, image: "../images/hifu8-5.gif" },
+        { startHour: 17, image: "../images/hifu9-5.gif" },
+        { startHour: 18, image: "../images/hifu10-5.gif" },
+        { startHour: 19, image: "../images/hifu11-5.gif" },
+        { startHour: 20, image: "../images/hifu8-1.gif" },
+        { startHour: 21, image: "../images/hifu9-1.gif" },
+        { startHour: 22, image: "../images/hifu10-1.gif" },
+        { startHour: 23, image: "../images/hifu11-1.gif" },
+        { startHour: 24, image: "../images/hifu8-2.gif" },
+      ];
+
+      const schedule4 = [
+        { startHour: 0, image: "../images/hifu12-1.gif" },
+        { startHour: 1, image: "../images/hifu13-1.gif" },
+        { startHour: 2, image: "../images/hifu12-2.gif" },
+        { startHour: 3, image: "../images/hifu13-2.gif" },
+        { startHour: 4, image: "../images/hifu12-3.gif" },
+        { startHour: 5, image: "../images/hifu13-3.gif" },
+        { startHour: 6, image: "../images/hifu12-4.gif" },
+        { startHour: 7, image: "../images/hifu13-4.gif" },
+        { startHour: 8, image: "../images/hifu12-5.gif" },
+        { startHour: 9, image: "../images/hifu13-5.gif" },
+        { startHour: 10, image: "../images/hifu12-1.gif" },
+        { startHour: 11, image: "../images/hifu13-1.gif" },
+        { startHour: 12, image: "../images/hifu12-2.gif" },
+        { startHour: 13, image: "../images/hifu13-2.gif" },
+        { startHour: 14, image: "../images/hifu12-3.gif" },
+        { startHour: 15, image: "../images/hifu13-3.gif" },
+        { startHour: 16, image: "../images/hifu12-4.gif" },
+        { startHour: 17, image: "../images/hifu13-4.gif" },
+        { startHour: 18, image: "../images/hifu12-5.gif" },
+        { startHour: 19, image: "../images/hifu13-5.gif" },
+        { startHour: 20, image: "../images/hifu12-1.gif" },
+        { startHour: 21, image: "../images/hifu13-1.gif" },
+        { startHour: 22, image: "../images/hifu12-2.gif" },
+        { startHour: 23, image: "../images/hifu13-2.gif" },
+        { startHour: 24, image: "../images/hifu12-3.gif" },
+      ];
+
+      const schedule5 = [
+        { startHour: 0, image: "../images/heal-1.gif" },
+        { startHour: 1, image: "../images/heal-2.gif" },
+        { startHour: 2, image: "../images/heal-3.gif" },
+        { startHour: 3, image: "../images/heal-4.gif" },
+        { startHour: 4, image: "../images/heal-5.gif" },
+        { startHour: 5, image: "../images/heal-6.gif" },
+        { startHour: 6, image: "../images/heal-7.gif" },
+        { startHour: 7, image: "../images/heal-9.gif" },
+        { startHour: 8, image: "../images/heal-10.gif" },
+        { startHour: 9, image: "../images/heal-11.gif" },
+        { startHour: 10, image: "../images/heal-12.gif" },
+        { startHour: 11, image: "../images/heal-13.gif" },
+        { startHour: 12, image: "../images/heal-14.gif" },
+        { startHour: 13, image: "../images/heal-1.gif" },
+        { startHour: 14, image: "../images/heal-2.gif" },
+        { startHour: 15, image: "../images/heal-3.gif" },
+        { startHour: 16, image: "../images/heal-4.gif" },
+        { startHour: 17, image: "../images/heal-5.gif" },
+        { startHour: 18, image: "../images/heal-6.gif" },
+        { startHour: 19, image: "../images/heal-7.gif" },
+        { startHour: 20, image: "../images/heal-8.gif" },
+        { startHour: 21, image: "../images/heal-9.gif" },
+        { startHour: 22, image: "../images/heal-10.gif" },
+        { startHour: 23, image: "../images/heal-11.gif" },
+      ];
+
+      const schedule6 = [
+        { startHour: 0, image: "../images/004001.gif" },
+        { startHour: 1, image: "../images/004002.gif" },
+        { startHour: 2, image: "../images/004003.gif" },
+        { startHour: 3, image: "../images/004004.gif" },
+        { startHour: 4, image: "../images/004005.gif" },
+        { startHour: 5, image: "../images/004006.gif" },
+        { startHour: 6, image: "../images/004007.gif" },
+        { startHour: 7, image: "../images/004008.gif" },
+        { startHour: 8, image: "../images/004009.gif" },
+        { startHour: 9, image: "../images/004010.gif" },
+        { startHour: 10, image: "../images/004011.gif" },
+        { startHour: 11, image: "../images/004012.gif" },
+        { startHour: 12, image: "../images/004013.gif" },
+        { startHour: 13, image: "../images/004014.gif" },
+        { startHour: 14, image: "../images/004015.gif" },
+        { startHour: 15, image: "../images/004016.gif" },
+        { startHour: 16, image: "../images/004017.gif" },
+        { startHour: 17, image: "../images/004018.gif" },
+        { startHour: 18, image: "../images/004019.gif" },
+        { startHour: 19, image: "../images/004020.gif" },
+        { startHour: 20, image: "../images/004021.gif" },
+        { startHour: 21, image: "../images/004022.gif" },
+        { startHour: 22, image: "../images/004001.gif" },
+        { startHour: 23, image: "../images/004002.gif" },
+      ];
+
+      const schedule7 = [
+        { startHour: 0, image: "../images/009001.gif" },
+        { startHour: 1, image: "../images/009002.gif" },
+        { startHour: 2, image: "../images/009003.gif" },
+        { startHour: 3, image: "../images/009004.gif" },
+        { startHour: 4, image: "../images/009005.gif" },
+        { startHour: 5, image: "../images/009006.gif" },
+        { startHour: 6, image: "../images/009007.gif" },
+        { startHour: 7, image: "../images/009010.gif" },
+        { startHour: 8, image: "../images/09011.gif" },
+        { startHour: 9, image: "../images/09012.gif" },
+        { startHour: 10, image: "../images/09013.gif" },
+        { startHour: 11, image: "../images/09014.gif" },
+        { startHour: 12, image: "../images/09015.gif" },
+        { startHour: 13, image: "../images/09016.gif" },
+        { startHour: 14, image: "../images/09017.gif" },
+        { startHour: 15, image: "../images/09018.gif" },
+        { startHour: 16, image: "../images/09019.gif" },
+        { startHour: 17, image: "../images/09020.gif" },
+        { startHour: 18, image: "../images/09021.gif" },
+        { startHour: 19, image: "../images/09022.gif" },
+        { startHour: 20, image: "../images/09023.gif" },
+        { startHour: 21, image: "../images/09024.gif" },
+        { startHour: 22, image: "../images/09020.gif" },
+        { startHour: 23, image: "../images/09015.gif" },
+      ];
+
+      const schedule8 = [
+        { startHour: 0, image: "images/005-06-06-002.gif" },
+        { startHour: 1, image: "images/005-006-06-009.gif" },
+        { startHour: 2, image: "images/005-006-06-009.gif" },
+        { startHour: 3, image: "images/005-004-08-002.gif" },
+        { startHour: 4, image: "images/005-002-50-002.gif" },
+        { startHour: 5, image: "images/005-003-07-001.gif" },
+        { startHour: 6, image: "images/005-001-50-001.gif" },
+        { startHour: 7, image: "images/00504-41-005.gif" },
+        { startHour: 8, image: "images/005-004-54-002.gif" },
+        { startHour: 9, image: "images/005-006-05-002.gif" },
+        { startHour: 10, image: "images/005-003-07-001.gif" },
+        { startHour: 11, image: "images/005-006-06-009.gif" },
+        { startHour: 12, image: "images/005-011-10-001.gif" },
+        { startHour: 13, image: "images/005-004-22-002.gif" },
+        { startHour: 14, image: "images/005-002-15-002.gif" },
+        { startHour: 15, image: "images/005-014-01-001.gif" },
+        { startHour: 16, image: "images/005-006-05-002.gif" },
+        { startHour: 17, image: "images/005-006-05-002.gif" },
+        { startHour: 18, image: "images/005-002-41-004.gif" },
+        { startHour: 19, image: "images/005-004-08-002.gif" },
+        { startHour: 20, image: "images/005-004-08-002.gif" },
+        { startHour: 21, image: "images/005-004-54-002.gif" },
+        { startHour: 22, image: "images/005-002-50-002.gif" },
+        { startHour: 23, image: "images/005-003-07-001.gif" },
+        { startHour: 24, image: "images/005-011-10-001.gif" },
+      ];
+
       // @ts-ignore
-      if (topImage) topImage.src = getTopImageForTime();
-    }
-
-    updateTopSlideshow();
-    setInterval(updateTopSlideshow, 10 * 60 * 1000);
-
-
-    const scheduleInfo = [
-      { startHour: 0, image: "../images/mid-2.gif" },
-      { startHour: 1, image: "../images/mid-3.gif" },
-      { startHour: 2, image: "../images/mid-1.gif" },
-      { startHour: 3, image: "../images/mid-2.gif" },
-      { startHour: 4, image: "../images/mid-3.gif" },
-      { startHour: 5, image: "../images/mor-5.gif" },
-      { startHour: 6, image: "../images/mor-6.gif" },
-      { startHour: 7, image: "../images/mor-7.gif" },
-      { startHour: 8, image: "../images/mor-8.gif" },
-      { startHour: 9, image: "../images/mor-9.gif" },
-      { startHour: 10, image: "../images/mor-10.gif" },
-      { startHour: 12, image: "../images/kon-5.gif" },
-      { startHour: 13, image: "../images/kon-5.gif" },
-      { startHour: 14, image: "../images/kon-6.gif" },
-      { startHour: 15, image: "../images/aft-1.gif" },
-      { startHour: 16, image: "../images/aft-2.gif" },
-      { startHour: 17, image: "../images/aft-3.gif" },
-      { startHour: 18, image: "../images/aft-4.gif" },
-      { startHour: 19, image: "../images/oya-2.gif" },
-      { startHour: 20, image: "../images/oya-3.gif" },
-      { startHour: 21, image: "../images/oya-4.gif" },
-      { startHour: 22, image: "../images/oya-5.gif" },
-      { startHour: 23, image: "../images/mid-1.gif" },
-    ];
-
-    const schedule1 = [
-
-      { startHour: 0, image: "../images/hifu1-1.gif" },
-      { startHour: 1, image: "../images/hifu2-1.gif" },
-      { startHour: 2, image: "../images/hifu3-1.gif" },
-      { startHour: 3, image: "../images/hifu1-2.gif" },
-      { startHour: 4, image: "../images/hifu2-2.gif" },
-      { startHour: 5, image: "../images/hifu3-2.gif" },
-      { startHour: 6, image: "../images/hifu1-3.gif" },
-      { startHour: 7, image: "../images/hifu2-3.gif" },
-      { startHour: 8, image: "../images/hifu3-3.gif" },
-      { startHour: 9, image: "../images/hifu1-4.gif" },
-      { startHour: 10, image: "../images/hifu2-4.gif" },
-      { startHour: 11, image: "../images/hifu3-4.gif" },
-      { startHour: 12, image: "../images/hifu1-5.gif" },
-      { startHour: 13, image: "../images/hifu2-5.gif" },
-      { startHour: 14, image: "../images/hifu3-5.gif" },
-      { startHour: 15, image: "../images/hifu1-1.gif" },
-      { startHour: 16, image: "../images/hifu2-1.gif" },
-      { startHour: 17, image: "../images/hifu3-1.gif" },
-      { startHour: 18, image: "../images/hifu1-2.gif" },
-      { startHour: 19, image: "../images/hifu2-2.gif" },
-      { startHour: 20, image: "../images/hifu3-2.gif" },
-      { startHour: 21, image: "../images/hifu1-3.gif" },
-      { startHour: 22, image: "../images/hifu2-3.gif" },
-      { startHour: 23, image: "../images/hifu3-3.gif" }
-    ];
-
-
-
-
-    const schedule2 = [
-
-      { startHour: 0, image: "../images/hifu4-1.gif" },
-      { startHour: 1, image: "../images/hifu5-1.gif" },
-      { startHour: 2, image: "../images/hifu6-1.gif" },
-      { startHour: 3, image: "../images/hifu7-1.gif" },
-      { startHour: 4, image: "../images/hifu4-2.gif" },
-      { startHour: 5, image: "../images/hifu5-2.gif" },
-      { startHour: 6, image: "../images/hifu6-2.gif" },
-      { startHour: 7, image: "../images/hifu7-2.gif" },
-      { startHour: 8, image: "../images/hifu4-3.gif" },
-      { startHour: 9, image: "../images/hifu5-3.gif" },
-      { startHour: 10, image: "../images/hifu6-3.gif" },
-      { startHour: 11, image: "../images/hifu7-3.gif" },
-      { startHour: 12, image: "../images/hifu4-4.gif" },
-      { startHour: 13, image: "../images/hifu5-4.gif" },
-      { startHour: 14, image: "../images/hifu6-4.gif" },
-      { startHour: 15, image: "../images/hifu7-4.gif" },
-      { startHour: 16, image: "../images/hifu4-5.gif" },
-      { startHour: 17, image: "../images/hifu5-5.gif" },
-      { startHour: 18, image: "../images/hifu6-5.gif" },
-      { startHour: 19, image: "../images/hifu7-5.gif" },
-      { startHour: 20, image: "../images/hifu4-1.gif" },
-      { startHour: 21, image: "../images/hifu5-1.gif" },
-      { startHour: 22, image: "../images/hifu6-1.gif" },
-      { startHour: 23, image: "../images/hifu7-1.gif" },
-    ];
-
-
-    const schedule3 = [
-      { startHour: 0, image: "../images/hifu8-1.gif" },
-      { startHour: 1, image: "../images/hifu9-1.gif" },
-      { startHour: 2, image: "../images/hifu10-1.gif" },
-      { startHour: 3, image: "../images/hifu11-1.gif" },
-      { startHour: 4, image: "../images/hifu8-2.gif" },
-      { startHour: 5, image: "../images/hifu9-2.gif" },
-      { startHour: 6, image: "../images/hifu10-2.gif" },
-      { startHour: 7, image: "../images/hifu11-2.gif" },
-      { startHour: 8, image: "../images/hifu8-3.gif" },
-      { startHour: 9, image: "../images/hifu9-3.gif" },
-      { startHour: 10, image: "../images/hifu10-3.gif" },
-      { startHour: 11, image: "../images/hifu11-3.gif" },
-      { startHour: 12, image: "../images/hifu8-4.gif" },
-      { startHour: 13, image: "../images/hifu9-4.gif" },
-      { startHour: 14, image: "../images/hifu10-4.gif" },
-      { startHour: 15, image: "../images/hifu11-4.gif" },
-      { startHour: 16, image: "../images/hifu8-5.gif" },
-      { startHour: 17, image: "../images/hifu9-5.gif" },
-      { startHour: 18, image: "../images/hifu10-5.gif" },
-      { startHour: 19, image: "../images/hifu11-5.gif" },
-      { startHour: 20, image: "../images/hifu8-1.gif" },
-      { startHour: 21, image: "../images/hifu9-1.gif" },
-      { startHour: 22, image: "../images/hifu10-1.gif" },
-      { startHour: 23, image: "../images/hifu11-1.gif" },
-      { startHour: 24, image: "../images/hifu8-2.gif" }
-
-    ];
-
-    const schedule4 = [
-      { startHour: 0, image: "../images/hifu12-1.gif" },
-      { startHour: 1, image: "../images/hifu13-1.gif" },
-      { startHour: 2, image: "../images/hifu12-2.gif" },
-      { startHour: 3, image: "../images/hifu13-2.gif" },
-      { startHour: 4, image: "../images/hifu12-3.gif" },
-      { startHour: 5, image: "../images/hifu13-3.gif" },
-      { startHour: 6, image: "../images/hifu12-4.gif" },
-      { startHour: 7, image: "../images/hifu13-4.gif" },
-      { startHour: 8, image: "../images/hifu12-5.gif" },
-      { startHour: 9, image: "../images/hifu13-5.gif" },
-      { startHour: 10, image: "../images/hifu12-1.gif" },
-      { startHour: 11, image: "../images/hifu13-1.gif" },
-      { startHour: 12, image: "../images/hifu12-2.gif" },
-      { startHour: 13, image: "../images/hifu13-2.gif" },
-      { startHour: 14, image: "../images/hifu12-3.gif" },
-      { startHour: 15, image: "../images/hifu13-3.gif" },
-      { startHour: 16, image: "../images/hifu12-4.gif" },
-      { startHour: 17, image: "../images/hifu13-4.gif" },
-      { startHour: 18, image: "../images/hifu12-5.gif" },
-      { startHour: 19, image: "../images/hifu13-5.gif" },
-      { startHour: 20, image: "../images/hifu12-1.gif" },
-      { startHour: 21, image: "../images/hifu13-1.gif" },
-      { startHour: 22, image: "../images/hifu12-2.gif" },
-      { startHour: 23, image: "../images/hifu13-2.gif" },
-      { startHour: 24, image: "../images/hifu12-3.gif" }
-    ];
-
-    const schedule5 = [
-      { startHour: 0, image: "../images/heal-1.gif" },
-      { startHour: 1, image: "../images/heal-2.gif" },
-      { startHour: 2, image: "../images/heal-3.gif" },
-      { startHour: 3, image: "../images/heal-4.gif" },
-      { startHour: 4, image: "../images/heal-5.gif" },
-      { startHour: 5, image: "../images/heal-6.gif" },
-      { startHour: 6, image: "../images/heal-7.gif" },
-      { startHour: 7, image: "../images/heal-9.gif" },
-      { startHour: 8, image: "../images/heal-10.gif" },
-      { startHour: 9, image: "../images/heal-11.gif" },
-      { startHour: 10, image: "../images/heal-12.gif" },
-      { startHour: 11, image: "../images/heal-13.gif" },
-      { startHour: 12, image: "../images/heal-14.gif" },
-      { startHour: 13, image: "../images/heal-1.gif" },
-      { startHour: 14, image: "../images/heal-2.gif" },
-      { startHour: 15, image: "../images/heal-3.gif" },
-      { startHour: 16, image: "../images/heal-4.gif" },
-      { startHour: 17, image: "../images/heal-5.gif" },
-      { startHour: 18, image: "../images/heal-6.gif" },
-      { startHour: 19, image: "../images/heal-7.gif" },
-      { startHour: 20, image: "../images/heal-8.gif" },
-      { startHour: 21, image: "../images/heal-9.gif" },
-      { startHour: 22, image: "../images/heal-10.gif" },
-      { startHour: 23, image: "../images/heal-11.gif" }
-    ];
-
-
-    const schedule6 = [
-      { startHour: 0, image: "../images/004001.gif" },
-      { startHour: 1, image: "../images/004002.gif" },
-      { startHour: 2, image: "../images/004003.gif" },
-      { startHour: 3, image: "../images/004004.gif" },
-      { startHour: 4, image: "../images/004005.gif" },
-      { startHour: 5, image: "../images/004006.gif" },
-      { startHour: 6, image: "../images/004007.gif" },
-      { startHour: 7, image: "../images/004008.gif" },
-      { startHour: 8, image: "../images/004009.gif" },
-      { startHour: 9, image: "../images/004010.gif" },
-      { startHour: 10, image: "../images/004011.gif" },
-      { startHour: 11, image: "../images/004012.gif" },
-      { startHour: 12, image: "../images/004013.gif" },
-      { startHour: 13, image: "../images/004014.gif" },
-      { startHour: 14, image: "../images/004015.gif" },
-      { startHour: 15, image: "../images/004016.gif" },
-      { startHour: 16, image: "../images/004017.gif" },
-      { startHour: 17, image: "../images/004018.gif" },
-      { startHour: 18, image: "../images/004019.gif" },
-      { startHour: 19, image: "../images/004020.gif" },
-      { startHour: 20, image: "../images/004021.gif" },
-      { startHour: 21, image: "../images/004022.gif" },
-      { startHour: 22, image: "../images/004001.gif" },
-      { startHour: 23, image: "../images/004002.gif" }
-    ];
-
-    const schedule7 = [
-      { startHour: 0, image: "../images/009001.gif" },
-      { startHour: 1, image: "../images/009002.gif" },
-      { startHour: 2, image: "../images/009003.gif" },
-      { startHour: 3, image: "../images/009004.gif" },
-      { startHour: 4, image: "../images/009005.gif" },
-      { startHour: 5, image: "../images/009006.gif" },
-      { startHour: 6, image: "../images/009007.gif" },
-      { startHour: 7, image: "../images/009010.gif" },
-      { startHour: 8, image: "../images/09011.gif" },
-      { startHour: 9, image: "../images/09012.gif" },
-      { startHour: 10, image: "../images/09013.gif" },
-      { startHour: 11, image: "../images/09014.gif" },
-      { startHour: 12, image: "../images/09015.gif" },
-      { startHour: 13, image: "../images/09016.gif" },
-      { startHour: 14, image: "../images/09017.gif" },
-      { startHour: 15, image: "../images/09018.gif" },
-      { startHour: 16, image: "../images/09019.gif" },
-      { startHour: 17, image: "../images/09020.gif" },
-      { startHour: 18, image: "../images/09021.gif" },
-      { startHour: 19, image: "../images/09022.gif" },
-      { startHour: 20, image: "../images/09023.gif" },
-      { startHour: 21, image: "../images/09024.gif" },
-      { startHour: 22, image: "../images/09020.gif" },
-      { startHour: 23, image: "../images/09015.gif" }
-    ];
-
-    const schedule8 = [
-
-      { startHour: 0, image: "images/005-06-06-002.gif" },
-      { startHour: 1, image: "images/005-006-06-009.gif" },
-      { startHour: 2, image: "images/005-006-06-009.gif" },
-      { startHour: 3, image: "images/005-004-08-002.gif" },
-      { startHour: 4, image: "images/005-002-50-002.gif" },
-      { startHour: 5, image: "images/005-003-07-001.gif" },
-      { startHour: 6, image: "images/005-001-50-001.gif" },
-      { startHour: 7, image: "images/00504-41-005.gif" },
-      { startHour: 8, image: "images/005-004-54-002.gif" },
-      { startHour: 9, image: "images/005-006-05-002.gif" },
-      { startHour: 10, image: "images/005-003-07-001.gif" },
-      { startHour: 11, image: "images/005-006-06-009.gif" },
-      { startHour: 12, image: "images/005-011-10-001.gif" },
-      { startHour: 13, image: "images/005-004-22-002.gif" },
-      { startHour: 14, image: "images/005-002-15-002.gif" },
-      { startHour: 15, image: "images/005-014-01-001.gif" },
-      { startHour: 16, image: "images/005-006-05-002.gif" },
-      { startHour: 17, image: "images/005-006-05-002.gif" },
-      { startHour: 18, image: "images/005-002-41-004.gif" },
-      { startHour: 19, image: "images/005-004-08-002.gif" },
-      { startHour: 20, image: "images/005-004-08-002.gif" },
-      { startHour: 21, image: "images/005-004-54-002.gif" },
-      { startHour: 22, image: "images/005-002-50-002.gif" },
-      { startHour: 23, image: "images/005-003-07-001.gif" },
-      { startHour: 24, image: "images/005-011-10-001.gif" }
-
-
-
-    ];
-
-// @ts-ignore
-    function getImageForSchedule(schedule) {
-      const now = new Date();
-      const hour = now.getHours();
-      for (let i = schedule.length - 1; i >= 0; i--) {
-        if (hour >= schedule[i].startHour) return schedule[i].image;
+      function getImageForSchedule(schedule) {
+        const now = new Date();
+        const hour = now.getHours();
+        for (let i = schedule.length - 1; i >= 0; i--) {
+          if (hour >= schedule[i].startHour) return schedule[i].image;
+        }
+        return schedule[schedule.length - 1].image;
       }
-      return schedule[schedule.length - 1].image;
-    }
-    const slideshowIds = [
-      ["slideshow-info", scheduleInfo],
-      ["slideshow-1", schedule1],
-      ["slideshow-2", schedule2],
-      ["slideshow-3", schedule3],
-      ["slideshow-4", schedule4],
-      ["slideshow-5", schedule5],
-      ["slideshow-6", schedule6],
-      ["slideshow-7", schedule7],
-      ["slideshow-8", schedule8],
-    ];
+      const slideshowIds = [
+        ["slideshow-info", scheduleInfo],
+        ["slideshow-1", schedule1],
+        ["slideshow-2", schedule2],
+        ["slideshow-3", schedule3],
+        ["slideshow-4", schedule4],
+        ["slideshow-5", schedule5],
+        ["slideshow-6", schedule6],
+        ["slideshow-7", schedule7],
+        ["slideshow-8", schedule8],
+      ];
 
-    function updateAllSlideshows() {
-      slideshowIds.forEach(([id, schedule]) => {
-        // @ts-ignore
-        const element = document.getElementById(id);
-        // @ts-ignore
-        if (element) element.src = getImageForSchedule(schedule);
-      });
-    }
-
-
-    // 初期表示
-    updateAllSlideshows();
-
-    // 必要に応じて、定期更新も可能
-    setInterval(updateAllSlideshows, 10 * 60 * 1000); // 10分ごとに更新
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
+      function updateAllSlideshows() {
+        slideshowIds.forEach(([id, schedule]) => {
+          // @ts-ignore
+          const element = document.getElementById(id);
+          // @ts-ignore
+          if (element) element.src = getImageForSchedule(schedule);
         });
+      }
+
+      // 初期表示
+      updateAllSlideshows();
+
+      // 必要に応じて、定期更新も可能
+      setInterval(updateAllSlideshows, 10 * 60 * 1000); // 10分ごとに更新
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        });
+
+        document
+          .querySelectorAll(".fade-up")
+          .forEach((el) => observer.observe(el));
       });
-
-      document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
-    });
-  </script>
-
-
-</body>
-
+    </script>
+  </body>
 </html>

@@ -2,6 +2,9 @@
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Narration from "../components/Narration.astro";
+
+import TodayScheduleImage from "../components/TodayScheduleImage.astro";
+
 import "../styles/style.css";
 ---
 
@@ -23,14 +26,20 @@ import "../styles/style.css";
     <body>
         <Header />
         <main>
+            <section class="hero">
+                <img
+                    id="slideshow-top"
+                    alt="トップ画像"
+                    class="responsive-img"
+                />
+                <h2>予約のない方の待ち時間は長いです。</h2>
+                <h2>
+                    プロの写真家・デザイナーの院長(砂辺)による写真を講座をはじめました<br
+                    />ご覧ください
+                </h2>
+                <h2>来週自分で作るホームページの作り方を説明します。</h2>
+            </section>
 
-        <section class="hero">
-            <img id="slideshow-top" alt="トップ画像" class="responsive-img">
-            <h2>予約のない方の待ち時間は長いです。 </h2>
-            <h2>プロの写真家・デザイナーの院長(砂辺)による写真を講座をはじめました<br>ご覧ください</h2>
-            <h2>来週自分で作るホームページの作り方を説明します。</h2>
-        </section>
-            
             <Narration />
 
             <section class="promo">
@@ -61,7 +70,8 @@ import "../styles/style.css";
 
             <section class="slides">
                 <h2>
-                あなたのお店に手作りの3つ折りスタンドを作りましょう。<br>5分でできます。
+                    あなたのお店に手作りの3つ折りスタンドを作りましょう。<br
+                    />5分でできます。
                 </h2>
                 <img
                     src="images/100000.jpg"
@@ -69,12 +79,11 @@ import "../styles/style.css";
                     alt=""
                 />
 
-                
                 <h2>
                     あちこちいこう/ 院長作<br />（毎時間１日２４回上映/
                     転写禁止です）
                 </h2>
-                                <img
+                <img
                     id="slideshow-info"
                     class="responsive-img fade-up"
                     alt="医学情報"
@@ -162,37 +171,8 @@ import "../styles/style.css";
 
         <Footer />
 
+        <TodayScheduleImage />
         <script>
-
-                        const scheduleTop = [
-                { startHour: 3, image: "/images/heizitu10.gif" },
-                { startHour: 14, image: "/images/heizitu10.gif" },
-                { startHour: 15, image: "/images/aft-10.gif" },
-                { startHour: 18, image: "/images/aft-10.gif" },
-            ];
-
-            function getTopImageForTime() {
-                const now = new Date();
-                const hour = now.getHours();
-                for (let i = scheduleTop.length - 1; i >= 0; i--) {
-                    if (hour >= scheduleTop[i].startHour)
-                        return scheduleTop[i].image;
-                }
-                return scheduleTop[0].image;
-            }
-
-            function updateTopSlideshow() {
-                const topImage = document.getElementById("slideshow-top");
-                // @ts-ignore
-                if (topImage) topImage.src = getTopImageForTime();
-            }
-            
-        </script>
-
-
-        <script>
-
-
             const scheduleInfo = [
                 { startHour: 0, image: "/images/atti90.jpg" },
                 { startHour: 1, image: "/images/atti89.jpg" },

@@ -1,6 +1,7 @@
 ---
 import Header from "../../components/header.astro";
 import Footer from "../../components/footer.astro";
+import TodayScheduleImage from "../../components/TodayScheduleImage.astro";
 import "../../styles/style.css";
 ---
 
@@ -169,32 +170,9 @@ import "../../styles/style.css";
 
         <Footer />
 
+        <TodayScheduleImage />
+
         <script>
-            const scheduleTop = [
-                { startHour: 3, image: "../images/heizitu5.gif" },
-                { startHour: 14, image: "../images/heizitu5.gif" },
-                { startHour: 15, image: "../images/heizitu5.gif" },
-                { startHour: 18, image: "../images/heizitu5.gif" },
-            ];
-
-            function getTopImageForTime() {
-                const now = new Date();
-                const hour = now.getHours();
-                for (let i = scheduleTop.length - 1; i >= 0; i--) {
-                    if (hour >= scheduleTop[i].startHour)
-                        return scheduleTop[i].image;
-                }
-                return scheduleTop[0].image;
-            }
-
-            function updateTopSlideshow() {
-                const topImage = document.getElementById("slideshow-top");
-                // @ts-ignore
-                if (topImage) topImage.src = getTopImageForTime();
-            }
-
-            updateTopSlideshow();
-            setInterval(updateTopSlideshow, 10 * 60 * 1000);
 
             const scheduleInfo = [
                 { startHour: 0, image: "../images/mid-2.gif" },

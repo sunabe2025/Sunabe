@@ -1,28 +1,28 @@
-<img id="slideshow-top" alt="トップ画像" class="responsive-img" />
+          <script>
+          const scheduleTop = [
+                { startHour: 3, image: "/images/heizitu10.gif" },
+                { startHour: 14, image: "/images/heizitu10.gif" },
+                { startHour: 15, image: "/images/aft-10.gif" },
+                { startHour: 18, image: "/images/aft-10.gif" },
+            ];
 
-<script type="module">
+            function getTopImageForTime() {
+                const now = new Date();
+                const hour = now.getHours();
+                for (let i = scheduleTop.length - 1; i >= 0; i--) {
+                    if (hour >= scheduleTop[i].startHour)
+                        return scheduleTop[i].image;
+                }
+                return scheduleTop[0].image;
+            }
 
-  const scheduleTop = [
-    { startHour: 3, image: "/images/heizitu16.gif" },
-    { startHour: 14, image: "/images/heizitu16.gif" },
-    { startHour: 15, image: "/images/heizitu16.gif" },
-    { startHour: 18, image: "/images/heizitu16.gif" }
-  ];
+            function updateTopSlideshow() {
+                const topImage = document.getElementById("slideshow-top");
+                // @ts-ignore
+                if (topImage) topImage.src = getTopImageForTime();
+            }
 
-  function getTopImageForTime() {
-    const now = new Date();
-    const hour = now.getHours();
-    for (let i = scheduleTop.length - 1; i >= 0; i--) {
-      if (hour >= scheduleTop[i].startHour) return scheduleTop[i].image;
-    }
-    return scheduleTop[0].image;
-  }
+            updateTopSlideshow();
+            setInterval(updateTopSlideshow, 10 * 60 * 1000);
 
-  function updateTopSlideshow() {
-    const topImage = document.getElementById("slideshow-top");
-    if (topImage) topImage.src = getTopImageForTime();
-  }
-
-  updateTopSlideshow();
-  setInterval(updateTopSlideshow, 10 * 60 * 1000);
-</script>
+            </script>
