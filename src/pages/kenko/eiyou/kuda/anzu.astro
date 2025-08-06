@@ -1,0 +1,99 @@
+---
+// Astroコンポーネント
+// 画像は public フォルダに配置されている前提で `/g.jpg` のように参照
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>あんず</title>
+    <style>
+      body {
+        font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f0f4f8;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #2c3e50;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 16px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .image-grid a img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 3px solid #3498db;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .image-grid a:hover img {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .image-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .lightbox:target {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      }
+
+      .lightbox:target .close {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+        z-index: 1001;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+
+    <div class="image-grid">
+      <a href="/images/3-1a.gif"><img src="/images/g.jpg" alt="g"></a>
+      <a href="/images/3-2a.gif"><img src="/images/r.jpg" alt="r"></a>
+      <a href="/images/3-3a.gif"><img src="/images/s.jpg" alt="s"></a>
+      <a href="/images/3-4a.gif"><img src="/images/h.jpg" alt="h"></a>
+      <a href="/images/3-5a.gif"><img src="/images/k.jpg" alt="k"></a>
+    </div>
+
+  </body>
+</html>
