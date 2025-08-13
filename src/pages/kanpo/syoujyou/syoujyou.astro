@@ -1,82 +1,270 @@
 ---
-import Header from "../../../components/header.astro"
-import Footer from "../../../components/footer.astro"
+import Header from "../../../components/header.astro";
+import Footer from "../../../components/footer.astro";
 import "../../../styles/style-syoujyou.css";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ja">
+    <head>
+        <script src="https://js.ptengine.jp/55iy7etj.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>症状で検索</title>
+        <link rel="stylesheet" href="../style-syoujyou.css" />
+    </head>
 
-<head>
-    <script src="https://js.ptengine.jp/55iy7etj.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>症状で検索</title>
-    <link rel="stylesheet" href="../style-syoujyou.css">
-</head>
+    <body>
+        <Header />
+        <main>
+            <section class="hero">
+                <section class="kampo-gallery">
+                    <a href="biyou"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/BIYOUNOBUNNYA.jpg"
+                        /></a
+                    >
+                    <a href="benpi"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/bennpi.jpg"
+                        /></a
+                    >
+                    <a href="mukumi"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/mukumibunya.jpg"
+                        /></a
+                    >
+                    <a href="himan"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/himanbunya.jpg"
+                        /></a
+                    >
+                    <a href="takansyou"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/takansyounobunnya.jpg"
+                        /></a
+                    >
+                    <a href="konenkisyogaii"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/kounenkisyougainobunya.jpg"
+                        /></a
+                    >
+                    <a href="nukege"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/nukegenobunnya.jpg"
+                        /></a
+                    >
+                    <a href="hiroukarou"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/hiroukarounobunya.jpg"
+                        /></a
+                    >
+                    <a href="hiesyo"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/hiesyobunya.jpg"
+                        /></a
+                    >
+                    <a href="ekisyu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/ekisyuubunya.jpg"
+                        /></a
+                    >
+                    <a href="zutsu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/zutsubunya.jpg"
+                        /></a
+                    >
+                    <a href="hinnyo"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/hinnnyounobunya.jpg"
+                        /></a
+                    >
+                    <a href="nikibi"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/nikibibunya.jpg"
+                        /></a
+                    >
+                    <a href="kanpan"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/kanpannobunya.jpg"
+                        /></a
+                    >
+                    <a href="tease"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/teasenobunnya.jpg"
+                        /></a
+                    >
+                    <a href="memai"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/memainobunya.jpg"
+                        /></a
+                    >
+                    <a href="katakori"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/katakorinobunnya.jpg"
+                        /></a
+                    >
+                    <a href="adhd"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/adhanobunya.jpg"
+                        /></a
+                    >
+                    <a href="hutsukayoi"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/futukayoinobunnya.jpg"
+                        /></a
+                    >
+                    <a href="gikurigosi"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/gikkurikgosinobunya.jpg"
+                        /></a
+                    >
+                    <a href="komurakaeri"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/komuragaerinobunya.jpg"
+                        /></a
+                    >
+                    <a href="gerisyo"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/gerisyobunya.jpg"
+                        /></a
+                    >
+                    <a href="nadonoiwakan"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/nodonoiwakannobunnya.jpg"
+                        /></a
+                    >
+                    <a href="bien"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/bienkafunsyounobunya.jpg"
+                        /></a
+                    >
+                    <a href="atopi-seihihuen"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/atopi-nobunya.jpg"
+                        /></a
+                    >
 
-<body>
-<Header  />
-    <main>
-        <section class="hero">
+                    <a href="tikunou"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/tikunousyounobunnya.jpg"
+                        /></a
+                    >
 
+                    <a href="nobose"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/nobosenobunnya.jpg"
+                        /></a
+                    >
+                    <a href="kataudetenosibire"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/kataudetenosibirenobunya.jpg"
+                        /></a
+                    >
+                    <a href="zennritsu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/zenritusenhidaisyounobunya.jpg"
+                        /></a
+                    >
+                    <a href="kayumi"
+                        ><img class="kampo-thumb" src="../../images/kayuminobunnya.jpg" /></a
+                    >
+                    <a href="nikibiato"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/nikibiatonobunya.jpg"
+                        /></a
+                    >
+                    <a href="douki"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/doukinobunnnya.jpg"
+                        /></a
+                    >
+                    <a href="kabinsei"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/kabinseityounobunya.jpg"
+                        /></a
+                    >
+                    <a href="arerugi-seiketumakuen"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/arerugi-seiketumakuennobunya.jpg"
+                        /></a
+                    >
+                    <a href="gepu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/geppunobunya.jpg"
+                        /></a
+                    >
+                    <a href="kasijyoumyakuryu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/kasizyoumyakuryuunobunnya.jpg"
+                        /></a
+                    >
+                    <a href="zakotsusinkeitu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/zakorusinkeituunobunya.jpg"
+                        /></a
+                    >
+                    <a href="sitsu"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/sitsubunya.jpg"
+                        /></a
+                    >
+                    <a href="jikaku"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/jikakubunya.jpg"
+                        /></a
+                    >
+                    <a href="syusinoitami"
+                        ><img
+                            class="kampo-thumb"
+                            src="../../images/teyubinoitaminobunnya.jpg"
+                        /></a
+                    >
+                </section>
+            </section>
+        </main>
+        <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button">
+            LINEで予約する
+        </a>
 
-<section class="kampo-gallery">
-
-<a href="biyou"><img class="kampo-thumb" src="../../images/BIYOUNOBUNNYA.jpg"></a>
-<a href="benpi"><img class="kampo-thumb" src="../../images/bennpi.jpg"></a>
-<a href="mukumi"><img class="kampo-thumb" src="../../images/mukumibunya.jpg" ></a>
-<a href="himan"><img class="kampo-thumb" src="../../images/himanbunya.jpg"></a>
-<a href="takansyou"><img class="kampo-thumb" src="../../images/takansyounobunnya.jpg"></a>
-<a href="konenkisyogaii"><img class="kampo-thumb" src="../../images/kounenkisyougainobunya.jpg"></a>
-<a href="nukege"><img class="kampo-thumb" src="../../images/nukegenobunnya.jpg" ></a>
-<a href="hiroukarou"><img class="kampo-thumb" src="../../images/hiroukarounobunya.jpg" ></a>
-<a href="hiesyo"><img class="kampo-thumb" src="../../images/hiesyobunya.jpg"></a>
-<a href="ekisyu"><img class="kampo-thumb" src="../../images/ekisyuubunya.jpg"></a>
-<a href="zutsu"><img class="kampo-thumb" src="../../images/zutsubunya.jpg"></a>
-<a href="hinnyo"><img class="kampo-thumb" src="../../images/hinnnyounobunya.jpg"></a>
-<a href="nikibi"><img class="kampo-thumb" src="../../images/nikibibunya.jpg"></a>
-<a href="kanpan"><img class="kampo-thumb" src="../../images/kanpannobunya.jpg"></a>
-<a href="tease"><img class="kampo-thumb" src="../../images/teasenobunnya.jpg"></a>
-<a href="memai"><img class="kampo-thumb" src="../../images/memainobunya.jpg"></a>
-<a href="katakori"><img class="kampo-thumb" src="../../images/katakorinobunnya.jpg"></a>
-<a href="adhd"><img class="kampo-thumb" src="../../images/adhanobunya.jpg"></a>
-<a href="hutsukayoi"><img class="kampo-thumb" src="../../images/futukayoinobunnya.jpg"></a>
-<a href="gikurigosi"><img class="kampo-thumb" src="../../images/gikkurikgosinobunya.jpg"></a>
-<a href="komurakaeri"><img class="kampo-thumb" src="../../images/komuragaerinobunya.jpg" ></a>
-<a href="gerisyo"><img class="kampo-thumb" src="../../images/gerisyobunya.jpg"></a>
-<a href="nadonoiwakan"><img class="kampo-thumb" src="../../images/nodonoiwakannobunnya.jpg"></a>
-<a href="bien"><img class="kampo-thumb" src="../../images/bienkafunsyounobunya.jpg"></a>
-<a href="atopi-seihihuen"><img class="kampo-thumb" src="../../images/atopi-nobunya.jpg"></a>
-
-<a href="tikunou"><img class="kampo-thumb" src="../../images/tikunousyounobunnya.jpg"></a>
-
-<a href="nobose"><img class="kampo-thumb" src="../../images/nobosenobunnya.jpg"></a>
-<a href="kataudetenosibire"><img class="kampo-thumb" src="../../images/kataudetenosibirenobunya.jpg"></a>
-<a href="zennritsu"><img class="kampo-thumb" src="../../images/zenritusenhidaisyounobunya.jpg"></a>
-<a href="nikibi"><img class="kampo-thumb" src="../../images/nikibbibunya.jpg"></a>
-<a href="douki"><img class="kampo-thumb" src="../../images/doukinobunnnya.jpg"></a>
-<a href="kabinsei"><img class="kampo-thumb" src="../../images/kabinseityounobunya.jpg"></a>
-<a href="arerugi-seiketumakuen"><img class="kampo-thumb" src="../../images/arerugi-seiketumakuennobunya.jpg"></a>
-<a href="gepu"><img class="kampo-thumb" src="../../images/geppunobunya.jpg"></a>
-<a href="kasijyoumyakuryu"><img class="kampo-thumb" src="../../images/kasizyoumyakuryuunobunnya.jpg"></a>
-<a href="zakotsusinkeitu"><img class="kampo-thumb" src="../../images/zakorusinkeituunobunya.jpg"></a>
-<a href="sitsu"><img class="kampo-thumb" src="../../images/sitsubunya.jpg"></a>
-<a href="jikaku"><img class="kampo-thumb" src="../../images/jikakubunya.jpg"></a>
-<a href="syusinoitami"><img class="kampo-thumb" src="../../images/teyubinoitaminobunnya.jpg"></a>
-
-</section>
-
-            
-
-        </section>
-
-    </main>
-    <a href="https://lin.ee/56a0xBp" target="_blank" class="fixed-button">
-        LINEで予約する
-    </a>
-
-<Footer>
-
-</body>
-
+        <Footer />
+    </body>
 </html>
