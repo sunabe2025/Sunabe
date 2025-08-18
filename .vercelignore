@@ -1,0 +1,18 @@
+# 不要ファイルをVercelに送らない
+node_modules
+.git
+dist
+.next
+.output
+.vite
+.cache
+*.log
+*.zip
+*.7z
+*.tar
+*.mp4
+*.mov
+*.psd
+*.ai
+*.raw
+*.pdf
