@@ -1,18 +1,16 @@
----
-import Narration from "../components/Narration.astro";
----
-
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <title>ほうろうき</title>
   </head>
   <body>
+   
+    <br /><h1>立ち食い</h1>
     <section class="section">
       <div class="container">
         <figure class="hero-image">
           <img
-            src="/images/pman44.jpg"
+            src="/images/tatigui1g.jpg"
             alt=""
             width="1600"
             height="900"
@@ -20,14 +18,38 @@ import Narration from "../components/Narration.astro";
             decoding="async"
           />
         </figure>
->
-        <div class="narration">
-          <Narration />
-        </div>
       </div>
     </section>
 
+    <section class="narration">
+      <img
+        src="/images/tatigui1t.jpg"
+        style="
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    "
+      />
+
+      <audio
+        controls
+        style="width: 90%; max-width: 600px; display: block; margin: 0 auto;"
+      >
+        <source src="/images/tatiguia.mp3" type="audio/mp3" />
+        お使いのブラウザは audio タグに対応していません。
+      </audio>
+    </section>
+
     <style>
+     
+      h1 {
+        text-align: center;
+      }
+
       :root {
         --radius: 10px;
       }
