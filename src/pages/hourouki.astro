@@ -1,88 +1,68 @@
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ほうろうき</title>
+    <style>
+      :root { --radius: 12px; }
+      body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; line-height: 1.7; }
+      h1, h2 { text-align: center; margin: 16px auto; }
+      .block { padding-block: clamp(24px, 4vw, 56px); }
+      .container { max-width: 960px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 24px); }
+      .hero { margin: 0; }
+      .hero img { display: block; width: 100%; height: auto; border-radius: var(--radius); object-fit: cover; }
+      .narration { margin-top: clamp(16px, 3vw, 28px); }
+      .narration .card-img {
+        width: min(90%, 600px);
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+      }
+      .narration audio {
+        width: min(90%, 600px);
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
-   
-    <br /><h1>立ち食い</h1>
-    <section class="section">
+    <h1>立ち食い</h1>
+
+    <section class="block">
       <div class="container">
-        <figure class="hero-image">
+        <figure class="hero">
           <img
             src="/images/tatigui1g.jpg"
-            alt=""
+            alt="立ち食いの情景"
             width="1600"
             height="900"
             loading="lazy"
             decoding="async"
           />
+
         </figure>
       </div>
     </section>
 
-    <section class="narration">
+    <section class="narration container">
       <img
+        class="card-img"
         src="/images/tatigui1t.jpg"
-        style="
-        width: 90%;
-        max-width: 600px;
-        height: auto;
-        display: block;
-        margin: 0 auto 20px auto;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    "
+        width="1200"
+        height="675"
+        loading="lazy"
+        decoding="async"
       />
 
-      <audio
-        controls
-        style="width: 90%; max-width: 600px; display: block; margin: 0 auto;"
-      >
-        <source src="/images/tatiguia.mp3" type="audio/mp3" />
+      <audio controls preload="none" aria-label="立ち食いナレーション音声">
+        <source src="/images/tatiguia.mp3" type="audio/mpeg" />
         お使いのブラウザは audio タグに対応していません。
-     
       </audio>
-      <br /><h1>上をクリックするとナレーションが流れます</h1>
 
+      <h2>上をクリックするとナレーションが流れます</h2>
     </section>
-
-    <style>
-     
-      h1 {
-        text-align: center;
-      }
-
-      :root {
-        --radius: 10px;
-      }
-
-      .section {
-        padding-block: clamp(24px, 4vw, 56px);
-      }
-
-      .container {
-        max-width: 960px;
-        margin-inline: auto;
-        padding-inline: clamp(16px, 4vw, 24px);
-      }
-
-      .hero-image {
-        margin: 0;
-      }
-
-      .hero-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: var(--radius);
-        object-fit: cover;
-      }
-
-      .narration {
-        margin-top: clamp(16px, 3vw, 28px);
-        line-height: 1.75;
-      }
-    </style>
   </body>
 </html>
