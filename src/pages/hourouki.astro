@@ -1,4 +1,74 @@
 ---
 import Narration from "../components/Narration.astro";
 ---
-<Narration  />
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ほうろうき</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <figure class="hero-image">
+          <img
+            src="/images/pman44.jpg"
+            alt=""
+            width="1600"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <figure class="hero-image">
+          <img
+            src="/images/pman44.jpg"
+            alt=""
+            width="1600"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+
+        <div class="narration">
+          <Narration />
+        </div>
+      </div>
+    </section>
+
+    <style>
+      :root {
+        --radius: 10px;
+      }
+
+      .section {
+        padding-block: clamp(24px, 4vw, 56px);
+      }
+
+      .container {
+        max-width: 960px;
+        margin-inline: auto;
+        padding-inline: clamp(16px, 4vw, 24px);
+      }
+
+      .hero-image {
+        margin: 0;
+      }
+
+      .hero-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        object-fit: cover;
+      }
+
+      .narration {
+        margin-top: clamp(16px, 3vw, 28px);
+        line-height: 1.75;
+      }
+    </style>
+  </body>
+</html>
