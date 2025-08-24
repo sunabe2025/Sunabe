@@ -1,43 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ほうろうき</title>
     <style>
-      :root { --radius: 12px; }
-      body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; line-height: 1.7; }
-      h1, h2 { text-align: center; margin: 16px auto; }
-      .block { padding-block: clamp(24px, 4vw, 56px); }
-      .container { max-width: 960px; margin-inline: auto; padding-inline: clamp(16px, 4vw, 24px); }
-      .hero { margin: 0; }
-      .hero img { display: block; width: 100%; height: auto; border-radius: var(--radius); object-fit: cover; }
-      .narration { margin-top: clamp(16px, 3vw, 28px); }
+      :root {
+        --radius: 12px;
+      }
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Noto Sans JP",
+          sans-serif;
+        line-height: 1.7;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        margin: 16px auto;
+      }
+      .block {
+        padding-block: clamp(24px, 4vw, 56px);
+      }
+      .container {
+        max-width: 960px;
+        margin-inline: auto;
+        padding-inline: clamp(16px, 4vw, 24px);
+      }
+      .hero {
+        margin: 0;
+      }
+      .hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        object-fit: cover;
+      }
+      .narration {
+        margin-top: clamp(16px, 3vw, 28px);
+      }
       .narration .card-img {
         width: min(90%, 600px);
         height: auto;
         display: block;
         margin: 0 auto 20px auto;
         border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
       .narration audio {
         width: min(90%, 600px);
         display: block;
         margin: 0 auto;
       }
+
+      .responsive-img {
+        width: 100%; /* 横幅いっぱい */
+        max-width: 960px; /* 最大幅を制御（必要に応じて変更） */
+        height: auto; /* 縦横比を維持 */
+        display: block;
+        margin: 0 auto; /* 中央揃え */
+        border-radius: 12px; /* 角丸（任意） */
+        object-fit: cover; /* 枠いっぱいに表示 */
+      }
+
+      .responsive-img {
+        width: 100%; /* 横幅いっぱい */
+        max-width: 960px; /* 最大幅を制御（必要に応じて変更） */
+        height: auto; /* 縦横比を維持 */
+        display: block;
+        margin: 0 auto; /* 中央揃え */
+        border-radius: 12px; /* 角丸（任意） */
+        object-fit: cover; /* 枠いっぱいに表示 */
+      }
     </style>
   </head>
   <body>
     <h1>夜と朝の間</h1>
 
-
-    
-            <section class="calendar">
-                <img src="/images/yorut.jpg" class="responsive-img" />
-                </section>
-               
-            
+    <section class="calendar">
+      <img src="/images/yorut.gif" class="responsive-img" />
 
       <audio controls preload="none" aria-label="立ち食いナレーション音声">
         <source src="/images/yorua.mp3" type="audio/mp3" />
