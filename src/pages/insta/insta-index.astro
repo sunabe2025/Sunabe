@@ -22,18 +22,17 @@ import "../../styles/style.css";
 
   <style>
     :root{
-      --brand:#0b4e9e;       /* 見出しなどの基調色 */
-      --accent:#1389ff;      /* 強調やリンク */
-      --ink:#1a1a1a;         /* 本文色 */
-      --muted:#6b7280;       /* 補助テキスト */
-      --bg:#ffffff;          /* 背景 */
-      --card:#ffffff;        /* カード背景 */
+      --brand:#0b4e9e;
+      --accent:#1389ff;
+      --ink:#1a1a1a;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#ffffff;
       --ring:rgba(19,137,255,.25);
       --radius:14px;
       --shadow:0 6px 20px rgba(0,0,0,.08);
     }
 
-    /* ベース */
     body{ color:var(--ink); background:var(--bg); line-height:1.75; }
     .container{
       width:min(100%, 1000px);
@@ -41,7 +40,6 @@ import "../../styles/style.css";
       padding: clamp(16px, 2vw, 24px);
     }
 
-    /* ヒーロー */
     .hero{
       position:relative;
       padding: clamp(20px, 5vw, 40px) 0;
@@ -60,7 +58,6 @@ import "../../styles/style.css";
       margin: 0;
     }
 
-    /* お知らせボックス */
     .notice{
       margin-top: clamp(18px, 2.4vw, 28px);
       background: var(--card);
@@ -77,18 +74,10 @@ import "../../styles/style.css";
       font-weight: 700;
       letter-spacing:.01em;
     }
-    .notice p{
-      margin:.5em 0 0;
-    }
-    .notice .small{
-      font-size: .92em;
-      color: var(--muted);
-    }
+    .notice p{ margin:.5em 0 0; }
+    .notice .small{ font-size: .92em; color: var(--muted); }
 
-    /* アクション（ボタン群） */
-    .actions{
-      margin: clamp(18px, 3vw, 28px) 0;
-    }
+    .actions{ margin: clamp(18px, 3vw, 28px) 0; }
     .sns-buttons{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -104,30 +93,27 @@ import "../../styles/style.css";
       transition: transform .1s ease, box-shadow .2s ease;
       outline: none;
     }
-    .sns-buttons a:focus-visible{
-      box-shadow: 0 0 0 4px var(--ring);
-    }
     .sns-buttons a:hover{ transform: translateY(-2px); }
+    .sns-buttons a:focus-visible{ box-shadow: 0 0 0 4px var(--ring); }
     .sns-buttons img{
       width:100%;
       height:auto;
       display:block;
-      aspect-ratio: 16/10;       /* だいたいの比率で整形 */
+      aspect-ratio: 16/10;
       object-fit: cover;
     }
 
-    /* Instagramリンク（固定ボタン） */
     .fixed-button{
       position: fixed;
       right: clamp(14px, 3vw, 22px);
       bottom: clamp(16px, 3.2vw, 24px);
-      padding: .85em 1.1em;
+      padding: 1.1em 1.6em;
       border-radius: 999px;
       background: var(--brand);
       color: #fff;
       text-decoration: none;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing:.02em;
       box-shadow: 0 10px 24px rgba(11,78,158,.25);
       border: 1px solid rgba(255,255,255,.2);
@@ -137,13 +123,9 @@ import "../../styles/style.css";
     .fixed-button:hover{ transform: translateY(-1px); background: var(--accent); }
     .fixed-button:focus-visible{ box-shadow: 0 0 0 4px var(--ring); outline:none; }
 
-    /* セクション余白 */
     section + section{ margin-top: clamp(22px, 4vw, 36px); }
-
-    /* 画像の共通固定サイズ（必要な場合のみ適用） */
     .fixed-size{ width:100%; height:auto; display:block; }
 
-    /* スマホ最適化 */
     @media (max-width: 640px){
       .sns-buttons{ grid-template-columns: 1fr; }
       .fixed-button{ bottom: 14px; right: 14px; }
@@ -155,13 +137,10 @@ import "../../styles/style.css";
   <Header />
 
   <main class="container">
-    <!-- ヒーロー -->
     <section class="hero" aria-labelledby="page-title">
       <h1 id="page-title" class="hero-title">instagramアカウントのご紹介</h1>
-
     </section>
 
-    <!-- Instagram紹介（文章の構造と文法を調整） -->
     <section class="notice" aria-labelledby="notice-title">
       <h2 id="notice-title">心地よい空間づくりの取り組み</h2>
       <p>
@@ -171,15 +150,29 @@ import "../../styles/style.css";
       </p>
       <p class="small">※いいねやフォローはご無理なさらず、まずはお気軽にご覧ください。</p>
       <p>本日も、あなた様にとって素敵な一日でありますように。</p>
+      <p>
+        👉 この取り組みの様子は、以下のInstagramリンクからご覧いただけます。<br />
+        <a href="https://www.instagram.com/pressokinawa/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: underline;">
+          ▶ プレス沖縄（@pressokinawa）のInstagramを見る
+        </a>
+      </p>
     </section>
-
 
     <section aria-label="本日の診療案内">
       <TodayScheduleImage />
     </section>
   </main>
 
-  <a href="https://www.instagram.com/pressokinawa/" target="_blank" rel="noopener noreferrer" class="fixed-button" aria-label="プレス沖縄のInstagramを新しいタブで開く">クリックしてinstagramを開く</a>
+  <a
+    href="https://www.instagram.com/pressokinawa/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="fixed-button"
+    aria-label="プレス沖縄のInstagramを新しいタブで開く"
+  >
+    クリックしてinstagramを開く
+  </a>
+
   <Footer />
 </body>
 </html>
