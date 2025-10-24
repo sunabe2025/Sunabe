@@ -6,173 +6,225 @@ import TodayScheduleImage from "../../components/TodayScheduleImage.astro";
 import "../../styles/style.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <!-- Ptengine -->
-  <script src="https://js.ptengine.jp/55iy7etj.js"></script>
-  <script src="https://js.ptengine.jp/554zwt96.js"></script>
+  <head>
+    <!-- Ptengine -->
+    <script src="https://js.ptengine.jp/55iy7etj.js"></script>
+    <script src="https://js.ptengine.jp/554zwt96.js"></script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>instagram</title>
-  <meta name="description" content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。">
-  <link rel="stylesheet" href="style-main.css">
+    <title>instagram</title>
+    <meta
+      name="description"
+      content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。"
+    />
+    <link rel="stylesheet" href="style-main.css" />
 
-  <style>
-    :root{
-      --brand:#0b4e9e;
-      --accent:#1389ff;
-      --ink:#1a1a1a;
-      --muted:#6b7280;
-      --bg:#ffffff;
-      --card:#ffffff;
-      --ring:rgba(19,137,255,.25);
-      --radius:14px;
-      --shadow:0 6px 20px rgba(0,0,0,.08);
-    }
+    <style>
+      :root {
+        --brand: #0b4e9e;
+        --accent: #1389ff;
+        --ink: #1a1a1a;
+        --muted: #6b7280;
+        --bg: #ffffff;
+        --card: #ffffff;
+        --ring: rgba(19, 137, 255, 0.25);
+        --radius: 14px;
+        --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      }
 
-    body{ color:var(--ink); background:var(--bg); line-height:1.75; }
-    .container{
-      width:min(100%, 1000px);
-      margin-inline:auto;
-      padding: clamp(16px, 2vw, 24px);
-    }
+      body {
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.75;
+      }
+      .container {
+        width: min(100%, 1000px);
+        margin-inline: auto;
+        padding: clamp(16px, 2vw, 24px);
+      }
 
-    .hero{
-      position:relative;
-      padding: clamp(20px, 5vw, 40px) 0;
-    }
-    .hero-title{
-      font-size: clamp(22px, 3.2vw, 32px);
-      font-weight: 800;
-      color: var(--brand);
-      letter-spacing:.02em;
-      line-height:1.25;
-      margin: 0 0 .25em;
-    }
-    .hero-lead{
-      font-size: clamp(15px, 2.3vw, 18px);
-      color: var(--muted);
-      margin: 0;
-    }
+      .hero {
+        position: relative;
+        padding: clamp(20px, 5vw, 40px) 0;
+      }
+      .hero-title {
+        font-size: clamp(22px, 3.2vw, 32px);
+        font-weight: 800;
+        color: var(--brand);
+        letter-spacing: 0.02em;
+        line-height: 1.25;
+        margin: 0 0 0.25em;
+      }
+      .hero-lead {
+        font-size: clamp(15px, 2.3vw, 18px);
+        color: var(--muted);
+        margin: 0;
+      }
 
-    .notice{
-      margin-top: clamp(18px, 2.4vw, 28px);
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(17,24,39,.06);
-      padding: clamp(14px, 2.2vw, 20px);
-    }
-    .notice h2{
-      display:flex; align-items:center; gap:.5em;
-      margin:0 0 .4em;
-      font-size: clamp(18px, 2.4vw, 20px);
-      color: var(--brand);
-      font-weight: 700;
-      letter-spacing:.01em;
-    }
-    .notice p{ margin:.5em 0 0; }
-    .notice .small{ font-size: .92em; color: var(--muted); }
+      .notice {
+        margin-top: clamp(18px, 2.4vw, 28px);
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(17, 24, 39, 0.06);
+        padding: clamp(14px, 2.2vw, 20px);
+      }
+      .notice h2 {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin: 0 0 0.4em;
+        font-size: clamp(18px, 2.4vw, 20px);
+        color: var(--brand);
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+      .notice p {
+        margin: 0.5em 0 0;
+      }
+      .notice .small {
+        font-size: 0.92em;
+        color: var(--muted);
+      }
 
-    .actions{ margin: clamp(18px, 3vw, 28px) 0; }
-    .sns-buttons{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(10px, 2.4vw, 16px);
-    }
-    .sns-buttons a{
-      display:block;
-      border-radius: 12px;
-      overflow:hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(17,24,39,.06);
-      background:#fff;
-      transition: transform .1s ease, box-shadow .2s ease;
-      outline: none;
-    }
-    .sns-buttons a:hover{ transform: translateY(-2px); }
-    .sns-buttons a:focus-visible{ box-shadow: 0 0 0 4px var(--ring); }
-    .sns-buttons img{
-      width:100%;
-      height:auto;
-      display:block;
-      aspect-ratio: 16/10;
-      object-fit: cover;
-    }
+      .actions {
+        margin: clamp(18px, 3vw, 28px) 0;
+      }
+      .sns-buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(10px, 2.4vw, 16px);
+      }
+      .sns-buttons a {
+        display: block;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(17, 24, 39, 0.06);
+        background: #fff;
+        transition:
+          transform 0.1s ease,
+          box-shadow 0.2s ease;
+        outline: none;
+      }
+      .sns-buttons a:hover {
+        transform: translateY(-2px);
+      }
+      .sns-buttons a:focus-visible {
+        box-shadow: 0 0 0 4px var(--ring);
+      }
+      .sns-buttons img {
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 16/10;
+        object-fit: cover;
+      }
 
-    .fixed-button{
-      position: fixed;
-      right: clamp(14px, 3vw, 22px);
-      bottom: clamp(16px, 3.2vw, 24px);
-      padding: 1.1em 1.6em;
-      border-radius: 999px;
-      background: var(--brand);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 16px;
-      letter-spacing:.02em;
-      box-shadow: 0 10px 24px rgba(11,78,158,.25);
-      border: 1px solid rgba(255,255,255,.2);
-      transition: transform .12s ease, box-shadow .2s ease, background .2s;
-      z-index: 50;
-    }
-    .fixed-button:hover{ transform: translateY(-1px); background: var(--accent); }
-    .fixed-button:focus-visible{ box-shadow: 0 0 0 4px var(--ring); outline:none; }
+      .fixed-button {
+        position: fixed;
+        right: clamp(14px, 3vw, 22px);
+        bottom: clamp(16px, 3.2vw, 24px);
+        padding: 1.1em 1.6em;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        box-shadow: 0 10px 24px rgba(11, 78, 158, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition:
+          transform 0.12s ease,
+          box-shadow 0.2s ease,
+          background 0.2s;
+        z-index: 50;
+      }
+      .fixed-button:hover {
+        transform: translateY(-1px);
+        background: var(--accent);
+      }
+      .fixed-button:focus-visible {
+        box-shadow: 0 0 0 4px var(--ring);
+        outline: none;
+      }
 
-    section + section{ margin-top: clamp(22px, 4vw, 36px); }
-    .fixed-size{ width:100%; height:auto; display:block; }
+      section + section {
+        margin-top: clamp(22px, 4vw, 36px);
+      }
+      .fixed-size {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    @media (max-width: 640px){
-      .sns-buttons{ grid-template-columns: 1fr; }
-      .fixed-button{ bottom: 14px; right: 14px; }
-    }
-  </style>
-</head>
+      @media (max-width: 640px) {
+        .sns-buttons {
+          grid-template-columns: 1fr;
+        }
+        .fixed-button {
+          bottom: 14px;
+          right: 14px;
+        }
+      }
+    </style>
+  </head>
 
-<body>
-  <Header />
+  <body>
+    <Header />
 
-  <main class="container">
-    <section class="hero" aria-labelledby="page-title">
-      <h1 id="page-title" class="hero-title">instagramアカウントのご紹介</h1>
-    </section>
+    <main class="container">
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title" class="hero-title">instagramアカウントのご紹介</h1>
+      </section>
 
-    <section class="notice" aria-labelledby="notice-title">
-      <h2 id="notice-title">心地よい空間づくりの取り組み</h2>
-      <p>
-        当クリニックは<strong>ストレスのない健康増進</strong>を目指しています。<br />
-        このたび、<strong>プレス沖縄様（代表：林）</strong>と共同で院内の心地よい空間づくりに取り組みました。<br />
-        その様子はプレス沖縄のInstagramでご紹介いただいております。
-      </p>
-      <p class="small">※いいねやフォローはご無理なさらず、まずはお気軽にご覧ください。</p>
-      <p>本日も、あなた様にとって素敵な一日でありますように。</p>
-      <p>
-        👉 この取り組みの様子は、以下のInstagramリンクからご覧いただけます。<br />
-        <a href="https://www.instagram.com/pressokinawa/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: underline;">
-          ▶ プレス沖縄（@pressokinawa）のInstagramを見る
-        </a>
-      </p>
-    </section>
+      <section class="notice" aria-labelledby="notice-title">
+        <h2 id="notice-title">心地よい空間づくりの取り組み</h2>
+        <p>
+          <strong>心安らぐ映像を、世界水準の品質で</strong><br/>
+          当クリニックには、日々のストレスや心身の疲れを抱えた方が多く来院されます。
+          私たちは、プレス沖縄様（代表：林竜聖）と協力し、セラピーの一環としてヒーリング映像素材を共同開発いたしました。
+          やさしい映像と音が、少しでも皆さまの心を穏やかにできますように。 ぜひ、下のリンク（インスタグラム）からご鑑賞ください。
+          あなた様にとって、今日が穏やかで良い一日となりますように。
+        </p>
+        <p class="small">
+          ※いいねやフォローはご無理なさらず、まずはお気軽にご覧ください。
+        </p>
+        <p>本日も、あなた様にとって素敵な一日でありますように。</p>
+        <p>
+          👉 この取り組みの様子は、以下のInstagramリンクからご覧いただけます。<br
+          />
+          <a
+            href="https://www.instagram.com/pressokinawa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--accent); font-weight: 600; text-decoration: underline;"
+          >
+            ▶ プレス沖縄（@pressokinawa）のInstagramを見る
+          </a>
+        </p>
+      </section>
 
-    <section aria-label="本日の診療案内">
-      <TodayScheduleImage />
-    </section>
-  </main>
+      <section aria-label="本日の診療案内">
+        <TodayScheduleImage />
+      </section>
+    </main>
 
-  <a
-    href="https://www.instagram.com/pressokinawa/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="fixed-button"
-    aria-label="プレス沖縄のInstagramを新しいタブで開く"
-  >
-    クリックしてinstagramを開く
-  </a>
+    <a
+      href="https://www.instagram.com/pressokinawa/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed-button"
+      aria-label="プレス沖縄のInstagramを新しいタブで開く"
+    >
+      クリックしてinstagramを開く
+    </a>
 
-  <Footer />
-</body>
+    <Footer />
+  </body>
 </html>
