@@ -56,17 +56,27 @@ section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-a img {
-  display: block;         /* インライン要素をブロックに変更 */
-  margin: 0 auto;         /* 左右中央寄せ */
-  text-align: center;     /* 念のため中央寄せ補強 */
-}
-
 a {
   display: block;
-  text-align: center;     /* リンク全体を中央に */
-  margin-top: 10px;       /* 上下に少し余白を付けたい場合 */
+  text-align: center;
+  margin: 10px 0;
 }
+
+a img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: none; /* PCでは制限しない */
+}
+
+/* スマホ用（幅600px以下） */
+@media (max-width: 600px) {
+  a img {
+    max-width: 250px; /* スマホでは小さくする（好みで調整） */
+    width: 100%;
+  }
+}
+
 
 
 /* ========== HEADER / NAVIGATION ========== */
