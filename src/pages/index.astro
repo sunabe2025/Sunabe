@@ -21,6 +21,59 @@ import "../styles/style.css";
             name="description"
             content="沖縄・北谷の砂辺クリニック。内科・皮膚科・漢方の予約診療に対応し、健康・レシピ情報も掲載。スマホでも見やすく、使いやすい公式サイト。"
         />
+       <style>
+           /* おしらせバナー */
+           .announcement {
+               display: flex;
+               gap: 16px;
+               align-items: center;
+               background: linear-gradient(90deg, #f0f8ff 0%, #ffffff 100%);
+               border: 1px solid rgba(11,78,158,0.08);
+               padding: 14px;
+               border-radius: 12px;
+               box-shadow: 0 6px 18px rgba(11,78,158,0.06);
+               margin: 12px 0;
+           }
+          /* indexページ専用：左下に固定するLINE予約ボタン */
+          .fixed-button.left {
+              position: fixed;
+              left: clamp(12px, 3vw, 16px);
+              bottom: clamp(12px, 3.2vw, 18px);
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              padding: 0.5em 0.9em;
+              min-width: 110px;
+              max-width: 200px;
+              width: auto;
+              height: auto;
+              border-radius: 12px;
+              background: #0b4e9e;
+              color: #fff;
+              text-decoration: none;
+              font-weight: 700;
+              font-size: 13px;
+              line-height: 1;
+              box-shadow: 0 8px 18px rgba(11,78,158,0.18);
+              border: 1px solid rgba(255,255,255,0.12);
+              z-index: 160;
+              transition: transform .12s ease, background .18s;
+              white-space: nowrap;
+          }
+          .fixed-button.left:hover { transform: translateY(-3px); background: #1389ff; }
+          .fixed-button.left:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(19,137,255,0.12); }
+          @media (max-width:640px) {
+              .fixed-button.left {
+                  left: 10px;
+                  bottom: 10px;
+                  padding: 0.45em 0.8em;
+                  font-size: 12px;
+                  min-width: 90px;
+                  max-width: 160px;
+              }
+          }
+       </style>
     </head>
 
     <body>
@@ -32,8 +85,14 @@ import "../styles/style.css";
                     alt="トップ画像"
                     class="responsive-img"
                 />
-        小学生以上の小児科診療しています。アルツハイマー型認知症に伴う症状に新薬レキサルテイが保険適応になりました。診療は6時から１４時半まで。注射は１５時５０分までです。
-    </div>
+        <section class="announcement" aria-label="おしらせ">
+            <div class="tag">おしらせ</div>
+            <div>
+                <h3>小学生以上の小児科診療を行っています</h3>
+                <p>アルツハイマー型認知症に伴う症状に対し、新薬「レキサルテイ」が保険適応となりました。</p>
+                <p class="meta">診療時間：6:00〜14:30　／　注射受付：～15:50</p>
+            </div>
+        </section>
                 <h2 id="notice-title">
                     砂辺クリニックのinstagramはこちらをご覧ください
                 </h2>
@@ -184,8 +243,18 @@ import "../styles/style.css";
                 />
             </section>
         </main>
-
-        <Footer />
+        <!-- indexページ専用：左下に固定表示するLINE予約ボタン -->
+        <a
+          href="https://lin.ee/56a0xBp"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="fixed-button left"
+          aria-label="LINEで予約する"
+        >
+          LINEで予約する
+        </a>
+ 
+         <Footer />
 
         <TodayScheduleImage />
         <script>
