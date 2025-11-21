@@ -39,40 +39,42 @@ import "../styles/style.css";
               position: fixed;
               left: clamp(12px, 3vw, 16px);
               bottom: clamp(12px, 3.2vw, 18px);
-              display: inline-flex;
+              display: inline-flex !important;
               align-items: center;
               justify-content: center;
-              gap: 8px;
-              padding: 0.5em 0.9em;
-              min-width: 110px;
-              max-width: 200px;
-              width: auto;
+              gap: 12px;
+              padding: 1.0em 1.6em;       /* 縦横ともに太く */
+              min-width: 180px;          /* 横幅を太く */
+              max-width: 320px;
+              width: auto !important;
               height: auto;
-              border-radius: 12px;
-              background: #0b4e9e;
+              border-radius: 999px;      /* 丸い-pill */
+              background: linear-gradient(90deg,#0b4e9e,#0e6ed8);
               color: #fff;
               text-decoration: none;
-              font-weight: 700;
-              font-size: 13px;
+              font-weight: 800;
+              font-size: 18px;           /* 大きめの文字 */
               line-height: 1;
-              box-shadow: 0 8px 18px rgba(11,78,158,0.18);
+              box-shadow: 0 12px 30px rgba(11,78,158,0.28);
               border: 1px solid rgba(255,255,255,0.12);
-              z-index: 160;
+              z-index: 999;
               transition: transform .12s ease, background .18s;
               white-space: nowrap;
           }
-          .fixed-button.left:hover { transform: translateY(-3px); background: #1389ff; }
-          .fixed-button.left:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(19,137,255,0.12); }
+          .fixed-button.left:hover { transform: translateY(-3px); background: linear-gradient(90deg,#1389ff,#2aa0ff); }
+          .fixed-button.left:focus-visible { outline: none; box-shadow: 0 0 0 6px rgba(19,137,255,0.12); }
           @media (max-width:640px) {
-              .fixed-button.left {
-                  left: 10px;
-                  bottom: 10px;
-                  padding: 0.45em 0.8em;
-                  font-size: 12px;
-                  min-width: 90px;
-                  max-width: 160px;
-              }
-          }
+    .fixed-button.left {
+        left: 12px;
+        bottom: 12px;
+        padding: 0.95em 1.2em !important; /* モバイルでも縦横余白を多めに */
+        font-size: 16px !important;       /* 文字を大きめに */
+        min-width: 160px !important;      /* 幅を確保 */
+        max-width: 300px !important;
+        width: auto !important;           /* グローバルで幅を上書きされている場合に備える */
+        border-radius: 28px;              /* 角丸の調整 */
+        box-shadow: 0 10px 24px rgba(11,78,158,0.25);
+    }
        </style>
     </head>
 
