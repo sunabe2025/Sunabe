@@ -75,6 +75,91 @@ import "../styles/style.css";
         border-radius: 28px;              /* 角丸の調整 */
         box-shadow: 0 10px 24px rgba(11,78,158,0.25);
     }
+       /* YouTubeリンクのスタイル */
+       .youtube-promo {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           padding: 16px;
+           background: #f9f9f9;
+           border: 1px solid #ddd;
+           border-radius: 12px;
+           margin: 16px auto;
+           max-width: 800px;
+           text-align: center;
+       }
+       .youtube-promo h2 {
+           font-size: 1.5rem;
+           color: #333;
+           margin-bottom: 8px;
+       }
+       .youtube-link {
+           display: inline-block;
+           padding: 10px 16px;
+           background: #ff0000;
+           color: #fff;
+           text-decoration: none;
+           font-weight: bold;
+           border-radius: 8px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           transition: background 0.3s ease, transform 0.2s ease;
+       }
+       .youtube-link:hover {
+           background: #cc0000;
+           transform: translateY(-2px);
+       }
+       @media (max-width: 640px) {
+           .youtube-promo h2 {
+               font-size: 1.2rem;
+           }
+           .youtube-link {
+               font-size: 0.9rem;
+               padding: 8px 12px;
+           }
+       }
+       /* Instagramセクションのスタイル */
+.instagram-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px; /* 余白を減らしてコンパクトに */
+    background: linear-gradient(90deg, #f0f8ff 0%, #ffffff 100%);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin: 12px auto; /* 上下の余白を減らす */
+    max-width: 600px; /* 最大幅を制限 */
+    text-align: center;
+}
+
+.instagram-card img {
+    max-width: 80%; /* 画像の幅を制限 */
+    height: auto;    /* 高さを自動調整 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    margin-top: 8px; /* 画像の上に余白を追加 */
+}
+
+.instagram-card h2 {
+    font-size: 1.2rem; /* タイトルのサイズを調整 */
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* モバイル対応 */
+@media (max-width: 640px) {
+    .instagram-card {
+        padding: 8px;
+        margin: 8px auto;
+    }
+    .instagram-card h2 {
+        font-size: 1rem;
+    }
+    .instagram-card img {
+        max-width: 90%; /* モバイルでさらにコンパクトに */
+    }
+}
        </style>
     </head>
 
@@ -87,23 +172,36 @@ import "../styles/style.css";
                     alt="トップ画像"
                     class="responsive-img"
                 />
-        <section class="announcement" aria-label="おしらせ">
-            <div class="tag">おしらせ</div>
-            <div>
-                <h3>クレジットカードご利用できます。診療科目：皮膚科・内科・小児科・漢方外来</h3>
-                <p>アルツハイマー型認知症に伴う症状に対し、新薬「レキサルテイ」が保険適応となりました。</p>
-                <p class="meta">診療時間：6:00〜14:30(日曜は９時半まで）　／　注射受付：～15:50（日曜は１０時半まで）</p>
-            </div>
-        </section>
-                <h2 id="notice-title">
-                    砂辺クリニックのinstagramはこちらをご覧ください
-                </h2>
+            </section>
+
+            <!-- YouTubeセクション -->
+            <section class="card youtube-card">
+                <h2>院長のYouTubeチャンネル</h2>
+                <p>
+                    <a
+                        href="https://www.youtube.com/@syousunabe1464"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button youtube-link"
+                        aria-label="院長のYouTubeチャンネルを開く"
+                    >
+                        ▶ 院長のYouTubeチャンネルはこちら
+                    </a>
+                </p>
+            </section>
+
+            <!-- Instagramセクション -->
+            <section class="card instagram-card">
+                <h2>砂辺クリニックのInstagramはこちらをご覧ください</h2>
                 <a href="https://www.instagram.com/sunabe.clinic/">
                     <img
                         src="images/sunabeinsta.gif"
-                        alt="Press Okinawa Instagram"
+                        alt="砂辺クリニック Instagram"
+                        class="responsive-img"
+                        style="max-width: 80%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-top: 8px;"
                     />
-                </a><br />
+                </a>
+            </section>
 
                 <section class="hero">
     
